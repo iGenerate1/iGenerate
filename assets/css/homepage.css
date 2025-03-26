@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul, #button{
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li, #button{
+    margin-left: 20px;
+}
+
+header nav ul li a, #button{
+    text-decoration: none;
+    color: #333;
+}
+
