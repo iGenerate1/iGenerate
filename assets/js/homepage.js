@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = false; //false to test without login and true if logged in
 
-    const signInButton = document.querySelector("sign-in-btn");
+    const signInButton = document.querySelector(".sign-in-btn");
 
     if (isLoggedIn) {
         const profileButton = document.createElement("button");
