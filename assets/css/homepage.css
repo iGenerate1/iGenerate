@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     background-color: #ffffff;
 }
@@ -34,6 +34,11 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
+.nav-links a:hover {
+    text-decoration: none;
+    color: #feca04;
+}
+
 .nav-links a.active {
     color: #feca04; /* Yellow for active link */
 }
@@ -58,6 +63,12 @@ body {
     opacity: 0.8;
     width: 100%;
     height: auto;
+    padding: 40px;
+}
+
+.carousel-item img {
+    border: 10px solid #39c29c;
+    border-radius: 10%;
 }
 
 .carousel-caption {
@@ -91,13 +102,14 @@ body {
 /* Pokéball Button Styling */
 #pokeButtonContainer {
     position: absolute;
-    top: calc(100% - 75px);
+    top: calc(100% - 95px);
     left: 49%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    margin-left: 35px;
 }
 
 #pokeButtonWrapper {
@@ -154,6 +166,18 @@ circle {
     }
 }
 
+/* Featured Section */
+
+h3{
+    margin-left: 35px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    color: #007cc5;
+}
+
 .featured {
     background-image: linear-gradient(to right, #065380 , #5ea4bb);
     color: white;
@@ -170,7 +194,6 @@ circle {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Featured Items */
 .featured-content {
     flex: 1;
 }
@@ -189,11 +212,6 @@ circle {
     border-radius: 5px;
     display: inline-block;
     margin-top: 5px;
-}
-
-.price a{
-    color: white;
-    text-decoration: none;
 }
 
 /* SPECIAL BUNDLES */
@@ -326,11 +344,6 @@ circle {
     transition: transform 0.2s ease-in-out;
 }
 
-
-.app-stores button:hover img {
-    transform: scale(1.1);
-}
-
 /*Galaxy Play Button*/
 .app-stores button:nth-child(3) img {
     width: 130px; 
@@ -359,10 +372,14 @@ circle {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; 
     align-items: flex-start;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
+}
+
+.footer-content a:hover{
+    text-decoration: underline;
 }
 
 .footer-links {
@@ -381,37 +398,62 @@ circle {
     margin-bottom: 10px;
 }
 
-.footer-logos img[alt="Niantic Logo"] {
-    /* Styles for Niantic Logo */
-    width: 150px; /* Example width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add margin if needed */
+.footer-logos a {
+    margin-left: 100px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.footer-logos a img[alt="Niantic Logo"] {
+    width: 70px;
+    height: 80px;
+    margin-bottom: 0;
+    left: 0px;
 }
 
 .footer-logos img[alt="iGenerate Logo"] {
-    /* Styles for Pokémon Company Logo */
-    width: 90px; /* Example width */
-    margin-right: 10px;
-    height: auto;
+    width: 90px;
+    height: 80px;
+    margin-left: 0px;
 }
 
-.footer-logos img[alt="Pokémon Logo"] {
-    /* Styles for Pokémon Company Logo */
-    width: 90px; /* Example width */
-    right: 50px;
-    height: 15px;;
-    display: flex;
+.footer-logos a img[alt="Pokémon Logo"] {
+    width: 100px;
+    height: 14px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-right: 100px;
+    margin-left: 0px;
+    align-self: center;
+    justify-content: center;
 }
 
 .footer-social {
-    display: flex;
+    flex-direction: column;
+    margin-left: auto; 
+    margin-right: 35px; 
+    align-items: center; 
+    margin-bottom: 10px;
 }
 
 .footer-social a {
-    text-decoration: none;
-    color: #ffffff;
+    display: flex; 
+    align-items: center; 
     margin-left: 10px;
-    font-size: 1.5em;
+}
+
+.footer-social a img {
+    width: 24px; 
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.footer-social img[alt="Facebook Logo"]{
+    height: 35px;
+    width: 35px;
+    padding-right: 10px;
 }
 
 .footer-bottom {
@@ -427,6 +469,12 @@ circle {
 
 .footer-bottom-links a {
     text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-bottom-links a:hover {
+    text-decoration: underline;
     color: #ffffff;
     margin: 0 10px;
 }
