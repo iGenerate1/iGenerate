@@ -110,7 +110,42 @@ document.addEventListener("DOMContentLoaded", () => {
             borderCircle.style.strokeDashoffset = `${201 - (clickCount * stepSize)}`;
         }
     });
+    
 });
+
+/* for the auto slide if ever needed
+document.addEventListener("DOMContentLoaded", () => {
+    const pokeButton = document.getElementById("pokeButton");
+    const carouselElement = document.getElementById("heroCarousel");
+    const carousel = new bootstrap.Carousel(carouselElement, { interval: false });
+    const borderCircle = document.querySelector("#borderSVG circle");
+
+    let clickCount = 1;
+    const stepSize = 104; // Each step fills 1/3 of the border
+
+    // every 3 seconds na auto slide
+    let slideInterval = setInterval(() => {
+        carousel.next(); 
+        clickCount++;
+        borderCircle.style.strokeDashoffset = `${201 - (clickCount * stepSize)}`;
+    }, 3000);
+
+    pokeButton.addEventListener("click", () => {
+        carousel.next(); 
+        clickCount++;
+        borderCircle.style.strokeDashoffset = `${201 - (clickCount * stepSize)}`;
+
+        // when button is clicked, reset the interval
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => {
+            carousel.next(); 
+            clickCount++;
+            borderCircle.style.strokeDashoffset = `${201 - (clickCount * stepSize)}`;
+        }, 3000);
+    });
+});
+
+*/
 
 //Active links for the current page
 document.addEventListener("DOMContentLoaded", () => {

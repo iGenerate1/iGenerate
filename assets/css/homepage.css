@@ -143,7 +143,7 @@ body {
 /* Pokéball Button Styling */
 #pokeButtonContainer {
     position: absolute;
-    top: calc(100% - 95px);
+    bottom: 280px;
     left: 49%;
     transform: translateX(-50%);
     display: flex;
@@ -151,6 +151,7 @@ body {
     align-items: center;
     z-index: 10;
     margin-left: 35px;
+    display: flex;
 }
 
 #pokeButtonWrapper {
@@ -205,6 +206,24 @@ circle {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#pokeButtonArrow {
+    background-color: #39c29c;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px; 
+    position: absolute;
+    top: 50%; 
+    right: -40px;
+    transform: translateY(-50%); 
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* Featured Section */
@@ -621,7 +640,15 @@ h3{
     }
 
     #pokeButtonContainer {
-        margin-left: 2px; /* left margin */
+        position: absolute;
+        top: 100px; 
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        margin-left: 0;
     }
 
     /* Featured items */
