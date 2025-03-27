@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #0080ff;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a, .sign-out {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.back-link {
+    display: block;
+    text-decoration: none;
+    color: #0080ff;
+    margin-bottom: 15px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.level-section, .profile-info {
+    width: 45%;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.level-bar {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.level-progress {
+    height: 10px;
+    background: #0080ff;
+    border-radius: 5px;
+    width: 0%;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0080ff;
+    color: white;
+    margin-top: 20px;
+}
