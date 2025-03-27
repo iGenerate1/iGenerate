@@ -46,8 +46,7 @@ body {
     align-items: center;
 }
 
-.nav-links a:hover {
-    text-decoration: none;
+#nav-links a:hover {
     color: #feca04;
 }
 
