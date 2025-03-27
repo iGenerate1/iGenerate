@@ -2,7 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0px;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #e5f3efd5;
 }
 
 /* Navbar Styling */
@@ -77,13 +77,14 @@ body {
     right: auto;
     bottom: 20%; 
     width: 50%; 
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     top: 10%;
     text-shadow: 2px 2px #2e2828;
 }
 
 .carousel-caption h1 {
-    font-size: 2.5rem; 
+    margin-top: 50px;
+    font-size: 3.5rem; 
     font-weight: bold;
 }
 
