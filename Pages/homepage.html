@@ -7,27 +7,26 @@
     <title>PokéWebstore</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/homepage.css" />
 </head>
 
 <body>
     <!-- HEADER -->
-    <nav class="navbar">
+    <nav id="navbar">
         <div class="logo">
             <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo">
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
             <li><a href="store_page.html" id="storeLink" class="nav-link">Store</a></li>
             <li><a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a></li>
             <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink"
                     class="nav-link">Event Ticketing</a></li>
         </ul>
-        <button class="sign-in-btn"><a href="signin_page.html">Sign In</a></button>
+        <button class="sign-in-btn"><a href="signin_page.html" id = "signinLink">Sign In</a></button>
     </nav>
     <hr class="bluegreen-line">
 
@@ -82,7 +81,7 @@
     </div>
 
         <!-- FEATURED ITEMS -->
-         <h3>Featured</h3>
+        <h3>Featured</h3>
         <div class="featured">
             <div class="featured-content">
                 <h2>Pokémon GO Fest 2025: Global Ticket</h2>
@@ -103,7 +102,7 @@
                 </div>
                 <div class="bundle-details">
                     <img src = "/assets/images/special bundle.png" alt="Special Bundle">
-                    <h3>Mystery Boxes</h3>
+                    <h4>Mystery Boxes</h4>
                     <p>3 Daily Bundles</p>
                     <button class="view-button">Sign in to View</button>
                 </div>

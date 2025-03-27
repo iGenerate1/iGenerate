@@ -1,3 +1,22 @@
+//Adding cart button to the navbar when the user is logged in
+document.addEventListener("DOMContentLoaded", () =>{
+    const isLoggedIn = false; //false to test without login and true if logged in
+
+        if (isLoggedIn) {
+            const navLinks = document.getElementById('nav-links');
+            const cartItem = document.createElement('li');
+
+            cartItem.innerHTML = `
+                <a href="cart.html" class="nav-link" title="Cart">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </a>
+            `;
+
+            navLinks.appendChild(cartItem);
+        }
+});
+
+
 //Clicking of the Button and Carousel Event
 //DOMContentLoaded event is fired when the browser has loaded the HTML, excluding stylesheets, images, and other resources.
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Active links for the current page
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
         //Get the current URL path without parameters
         let currentPath = window.location.pathname.split("/").pop() || "";
 
@@ -38,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(pages[currentPath]).classList.add("active");
     }
 });
+
+
 
 
 
