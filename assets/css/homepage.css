@@ -596,7 +596,7 @@ h3{
     color: #ffffff;
 }
 
-/* iPad Air & similar tablets (width ≤ 820px) */
+/* Responsive Design */
 @media (min-width: 601px) and (max-width: 900px) {
 
     .nav-links li {
