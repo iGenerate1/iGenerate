@@ -1,0 +1,48 @@
+/* Sign-In Page CSS */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.image-section img {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+}
+.form-section {
+    padding: 20px;
+    text-align: center;
+}
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background: #ffcb05;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+.remember-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
