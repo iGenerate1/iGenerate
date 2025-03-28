@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(pages[currentPath]).classList.add("active");
 }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+        interval: 3000,  // Auto-slide every 3 seconds
+        wrap: true
+    });
+});
