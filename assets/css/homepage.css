@@ -113,24 +113,24 @@ body {
 
 .carousel-caption {
     text-align: left;
-    left: 5%; 
+    left: 5vw; 
     right: auto;
-    bottom: 20%; 
-    width: 50%; 
-    margin-bottom: 30px;
-    top: 10%;
+    bottom: 10vw; 
+    top: 5vw; 
+    width: 90vw; 
+    margin-bottom: 3vw; 
     text-shadow: 2px 2px #2e2828;
 }
 
 .carousel-caption h1 {
-    margin-top: 50px;
-    font-size: 3.5rem; 
+    margin-top: 2vw; 
+    font-size: 6vw;
     font-weight: bold;
 }
 
 .carousel-caption p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 2.5vw;
+    margin-top: 1vw; /* Use vw units for responsiveness */
 }
 
 .bluegreen-line {
@@ -175,7 +175,7 @@ body {
     align-items: center;
     overflow: hidden;
     z-index: 2; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0 80px rgba(0, 0, 0, 0.2);
     border: none;
 }
 
@@ -194,6 +194,7 @@ body {
     height: 120px; 
     z-index: 1; 
     pointer-events: none; 
+
 }
 
 /* Border Animation */
@@ -209,7 +210,6 @@ circle {
 }
 
 #pokeButtonArrow {
-    background-color: #39c29c;
     border-radius: 50%;
     width: 35px;
     height: 35px; 
@@ -218,7 +218,7 @@ circle {
     right: -40px;
     transform: translateY(-50%); 
     font-size: 1.5em;
-    color: white;
+    color: #ed1c24;
     cursor: pointer;
     z-index: 3;
     display: flex; 
@@ -285,6 +285,7 @@ h3{
     font-size: 1.5em;
     margin-bottom: 15px;
     font-weight: bold;
+    margin-left: 55px;
 }
 
 
@@ -293,6 +294,7 @@ h3{
 .bundle-details {
     flex: 1;
     text-align: center;
+    margin-left: 55px;
 }
 
 .bundle-details img {
@@ -316,9 +318,10 @@ h3{
 
 /* SIGN IN BUTTON */
 .view-button {
+    margin-left: 45px;
     background-color: #39c29c; 
     color: white;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -354,7 +357,7 @@ h3{
 .bundle-card {
     background-image: url("/assets/images/real-pokemon.png");
     background-size: cover;
-    background-position: center 5%;
+    background-position: 56% 9%;
     background-size: 150px;
     background-repeat: no-repeat;
     width: 40vw;
@@ -368,6 +371,7 @@ h3{
 }
 
 .bundle-card img {
+    margin-left: 55px;
     width: 150px;
     height: auto;
     border-radius: 10px;
@@ -385,15 +389,18 @@ h3{
     color: #007cc5;
     font-weight: bold;
     margin-bottom: 5px;
+    margin-left: 55px;
 }
 
 .bundle-card p {
     font-size: 0.9em;
     color: #333;
     margin-bottom: 10px;
+    margin-left: 55px;
 }
 
 .buy-button {
+    margin-left: 55px;
     background-image: url("/assets/images/Pokecoins.png");
     background-size: 20px;
     background-repeat: no-repeat;
@@ -414,7 +421,6 @@ h3{
     background-color: #feca04;
     transform: scale(1.05);
 }
-
 
 
 /* DOWNLOAD BANNER */
@@ -469,7 +475,6 @@ h3{
     cursor: pointer;
 }
 
-
 .app-stores button img {
     width: 120px; 
     height: auto;
@@ -498,16 +503,18 @@ h3{
 /* FOOTER */
 .footer {
     background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
-    padding: 20px;
+    padding: 40px;
+    padding-top: 30px;
     color: #ffffff;
 }
 
 .footer-content {
     display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-content a:hover{
@@ -516,6 +523,7 @@ h3{
 
 .footer-links {
     display: flex;
+    GAP: 40px;
 }
 
 .footer-column {
@@ -532,16 +540,17 @@ h3{
 
 .footer-logos {
     display: flex;
-    justify-content: center; /* Centers logos horizontally */
-    align-items: center; /* Aligns logos vertically */
-    gap: 40px; /* Ensures even spacing between logos */
-    margin-top: 20px; /* Adjust margin as needed */
-    padding-left: 430px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 70%;
+    padding-bottom: 10px;
 }
 
 .footer-logos img {
-    height: 50px; /* Adjust to a consistent height */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; 
+    width: auto; 
 }
 
 
@@ -561,11 +570,11 @@ h3{
 }
 
 .footer-social {
-    flex-direction: column;
-    margin-left: auto; 
-    margin-right: 35px; 
-    align-items: center; 
-    margin-bottom: 10px;
+    justify-content: flex-end;
+    display: flex;
+    gap: 15px;
+    width: 100%; 
+    margin-top: 10px; 
 }
 
 .footer-social a {
@@ -614,13 +623,16 @@ h3{
     color: #ffffff;
 }
 
-/* Responsive Design */
-@media (min-width: 601px) and (max-width: 900px) {
+/* Responsive Design STARTS HERE*/
 
+/* FINAL - Tablet/iPad (width ≤ 900px) */
+@media (max-width: 900px) {
+
+    /* Navbar */
     .nav-links li {
         padding-top: 10px;
         margin: 5px 10px; /* Adds spacing between links */
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Carousel */
@@ -671,6 +683,115 @@ h3{
     .download {
         width: 500px;
         height: 300px;
+        padding: 20px; /* Reduced padding */
+        padding-bottom: 60px;
+        display: flex; /* Added flexbox for alignment */
+        align-items: center; /* Vertically align items */
+    }
+    
+    .download-banner {
+        padding: 20px; /* Reduced padding */
+        font-size: 15px;
+    }
+    
+    .download-logo {
+        width: 150px;
+        align-items: center;
+        padding-left: 0px;
+    }
+    
+    .download-text h2 {
+        margin-right: 0px; 
+        font-size: 30px;
+        width: auto; 
+        padding-right: 50px;
+    }
+    
+    .app-stores {
+        display: flex;
+        width: 10px;
+        height: 10px;
+        padding: 0px;
+        gap: 5px;
+    }
+    
+    .app-stores button img {
+        margin-top: 20px;
+        margin-left: -2px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        padding-left: 90px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logos {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* FINAL SPLIT SCREEN FOR DESKTOPS*/
+@media (min-width: 901px) and (max-width: 1200px){
+    /* Carousel */
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-item h1 {
+        font-size: 1.5rem;
+        padding-left: 20px;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+
+    #pokeButtonContainer {
+        position: absolute;
+        top: 140px; 
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        margin-left: 0;
+    }
+
+    /* Featured items */
+    h3{
+        margin-right: 50px; /* right margin */
+    }
+
+    .featured {
+        width: 700px;
+        height: 300px;
+    }
+
+    .featured-item {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Download banner */
+
+    .download {
+        width: 700px;
+        height: 300px;
         padding: 9px;
         padding-bottom: 60px;
     }
@@ -709,96 +830,291 @@ h3{
         gap: 1px;
     }
 
-    /* Footer */
-    footer {
+    .footer-content {
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
-    .footer-logos{
-        display: flex;
-        justify-content: flex-start;
-        gap: 1rem;
-        justify-content: center;
-        transform: translateX(-400px);
+    .footer-logos {
+        justify-content: flex-end;
     }
-    .footer-logos a img[alt="Niantic Logo"] {
-        width: 70px;
-        height: 80px;
-        margin-bottom: 0;
-        left: 0px;
-    }
-    
-    .footer-logos img[alt="iGenerate Logo"] {
-        width: 90px;
-        height: 80px;
-        margin-right: 0px;
-        transform: translateX(-90px);
-    }
-    
-    .footer-logos a img[alt="Pokémon Logo"] {
-        width: 100px;
-        height: 14px;
-        margin-top: 40px;
-        margin-bottom: 0;
-        margin-right: 100px;
-        margin-left: 0px;
-        align-self: center;
-        justify-content: center;
-    }
-    
-    .footer-social a img {
-        flex-direction: row;
-        width: 24px;
-        height: auto;
-        padding-bottom: 10px;
-        transform: translateX(-390px);
+
+    .footer-social {
+        justify-content: flex-end;
     }
 }
 
-
-/* iPhone 14 Pro Max & similar (width ≤ 430px) */
-@media (max-width: 430px) {
-    /* Carousel */
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-item h1 {
-        font-size: 1.5rem;
-    }
-
-    .carousel-item p {
-        font-size: 0.9rem;
-    }
-
-    /* Featured items */
-    .featured-item {
-        padding: 0.8rem;
-        font-size: 0.85rem;
-    }
-
-    /* Download banner */
-    .download-banner {
-        padding: 0.8rem;
-        font-size: 0.85rem;
-    }
-
-    /* Footer - stack for visibility */
-    footer {
-        display: flex;
+/* MOBILE */
+@media (max-width: 768px) {
+    #navbar {
         flex-direction: column;
         align-items: center;
+    }
+
+    .nav-links a{
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .sign-in-btn{
+        font-size: 10px;
+        padding: 5px 20px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    .profile-btn{
+        font-size: 10px;
+        padding: 5px 20px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    .bluegreen-line {
+        height: 10px;
+    }
+    
+    .carousel-item img {
+        width: 100vh;
+        height: auto;
+    }
+    
+    .carousel-item {
+        padding: 10px; 
+    }
+
+    .carousel-caption {
+        left: 3vw;
+        bottom: 5vw;
+        top: 3vw;
+        width: 94vw;
+    }
+
+    .carousel-caption h1 {
+        font-size: 8vw; 
+    }
+
+    .carousel-caption p {
+        font-size: 3.5vw; 
+    }
+
+    #pokeButtonContainer {
+        position: absolute;
+        top: 30px; 
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        margin-left: 0;
+    }
+
+    #pokeButton {
+        width: 50px;
+        height: 50px;
+    }
+
+    #pokeButton img {
+        width: 60%;
+    }
+
+    #borderSVG {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    #pokeButtonArrow {
+        width: 20px;
+        height: 20px; 
+        right: 10px;
+        font-size: 1em;
+    }
+
+    /* Featured */
+    h3{
+        margin-left: 60px;
+        font-size: 1.2em;
+    }
+
+    .featured {
+        margin-left: 65px;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .featured-content {
+        padding: 10px;
         text-align: center;
     }
 
-    .footer-logos,
-    .footer-socials {
+    .featured-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .price {
+        margin-bottom: -10px;
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+
+    /* SPECIAL BUNDLES */
+    .bundles {
+        margin: 20px auto;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .bundles h2 {
+        margin-left: -10px;
+        font-size: 1.2em;
+    }
+
+    /* SPECIAL BUNDLE DETAILS */
+    .view-button {
+        margin-left: 5px;
+        background-color: #39c29c; 
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .view-button a {
+        color: white;
+    }
+
+    /* SPECIAL BUNDLES ONCE USER IS LOGGED IN */
+     .bundles {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .bundle-content {
+        display: flex;
+        justify-content: center;
+        gap: 40px; /* Adds spacing between bundles */
+        flex-wrap: wrap;
+        margin-right: 30px;
+    }
+
+    /* Individual bundle card styling */
+
+    .bundle-card {
+        background-image: url("/assets/images/real-pokemon.png");
+        width: 90vw;
+        height: 320px;
+        margin-left: 20px;
+        background-color: #d9eee9;
+    }
+
+    .bundle-card img {
+        margin-left: 25px;
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Text content */
+    .bundle-card .content {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+
+    .bundle-card h4 {
+        font-size: 1.5em;
+        margin-left: 15px;
+    }
+
+    .bundle-card p {
+        font-size: 0.9em;
+        margin-left: 15px;
+    }
+
+    .buy-button {
+        margin-left: 15px;
+    }
+    
+    /* DOWNLOAD BANNER */
+    .app-stores {
+        flex-wrap: wrap; /* Ensures buttons wrap properly */
+        gap: 4px; 
+    }
+
+    .download {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin: 0 auto; 
+        margin-bottom: 20px;
+    }
+
+    .download-logo {
+        width: 90px; 
+        margin-top: 5px;
+    }
+
+    .download-text h2 {
+        font-size: 1.1em; 
+        width: 100%; 
+        margin-top: -50px;
+        margin-left: 20px;
+    }
+
+    /*Galaxy Play Button*/
+    .app-stores button:nth-child(3) img {
+        width: 100px; 
+        height: 30px;
+        margin-left: 150px; 
+        margin-top: -60px;
+    }
+
+    /*Google Play Store Button*/
+    .app-stores button:nth-child(2) img {
+        width: 100px; 
+        height: 30px; 
+        margin-left: 150px;
+        margin-bottom: -50px; 
+    }
+
+    /*Apple App Store Button*/
+    .app-stores button:nth-child(1) img {
+        width: 100px; 
+        height: 30px; 
+        margin-left: 150px;
+        margin-top: -20px;
+    }
+
+    /* Footer */
+    .footer-content{
+        margin-right: 50px;
+        justify-content: space-between;
+    }
+
+    .footer-logos img{
+        margin-right: 50px;
+    }
+
+    .footer-social a img {
+        margin-right: 50px;
+    }
+
+    .footer-bottom-links {
+        text-align: center;
+        padding-bottom: 10px;
     }
 }
