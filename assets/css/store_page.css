@@ -102,11 +102,22 @@ body {
 
 
 /* hero section */
-.carousel-item img {
-    height: 50vh;
-    object-fit: cover;
+/* HERO CONTAINER */
+/* HERO SECTION */
+.hero-section {
+    height: 40vh;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #d9f7e5, #ffffff); /* Light gradient */
+    overflow: hidden;
+    z-index: -1;
 }
-.carousel-caption {
+
+/* HERO TEXT */
+
+.hero-text {
+    color: #ffffff;
     text-align: left;
     left: 5%; 
     right: auto;
@@ -114,22 +125,83 @@ body {
     width: 50%; 
     margin-bottom: 30px;
     top: 10%;
-    text-shadow: 2px 2px #2e2828;
-}
-.carousel-caption h1 {
-    margin-top: 20px;
+        text-shadow: 
+            2px 2px 5px rgba(46, 40, 40, 0.4), 
+            -2px -2px 5px rgba(46, 40, 40, 0.4), 
+            3px -3px 5px rgba(46, 40, 40, 0.3), 
+            -3px 3px 5px rgba(46, 40, 40, 0.3);
+    }
+    
+
+
+.hero-text h1 {
+    margin-top: 0px;
     font-size: 3.5rem; 
     font-weight: bold;
+    z-index: 1;
 }
 
-.carousel-caption p {
+.hero-caption p {
     font-size: 1.2rem;
     margin-top: 10px;
+    z-index: 1;
+}
+
+/* POKEMON CONTAINER */
+.pokemon-container {
+    display: flex;
+    gap: 80px; /* Increased gap between Pokémon */
+    width: auto;
+    height: 60%;
+    position: absolute;
+    bottom: 10px; /* Position under the text */
+    animation: slide 20s linear infinite; /* Move from left to right */
+    z-index: -2;
+}
+
+.left-row {
+    left: -100%; /* Start off-screen from the left */
+    animation-name: slideRight;
+    z-index: -1;
+}
+
+.right-row {
+    right: -100%; /* Start off-screen from the right */
+    animation-name: slideLeft;
+}
+
+/* INDIVIDUAL POKEMON */
+.pokemon {
+    margin: 0 60px; /* spacing between Pokémon */
+    width: 120px;
+    animation: float 5s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+/* FLOATING EFFECT */
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+/* SLIDING EFFECTS */
+@keyframes slideRight {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes slideLeft {
+    0% { right: -100%; }
+    100% { right: 100%; }
+    100% { transform: translateY(-140px); }
+}
+
+
+
 
 
 /* FOOTER */
 
-}
 footer {
     background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
     padding: 20px;
