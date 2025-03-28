@@ -145,15 +145,15 @@ tickets.nianticlabs.com
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    background: white;
-    border-radius: 10px;
+    background: transparent; 
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 40px;
+    box-shadow: none; 
+    padding: 0; 
 }
 
 .form-section {
-    width: 60%;
+    width: 40%;
+    height: 56.5%; 
     background-color: white;
     padding: 30px;
     text-align: center;
@@ -161,6 +161,17 @@ tickets.nianticlabs.com
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* Adjust width to fit the image */
+    height: 100vh;
+    background: url('/assets/images/profile-page-banner.webp') no-repeat center center;
+    background-size: cover;
 }
 
 .form-section h2 {
