@@ -191,7 +191,7 @@ body {
 #borderSVG {
     position: absolute;
     width: 120px; 
-    height: 120px;
+    height: 120px; 
     z-index: 1; 
     pointer-events: none; 
 }
