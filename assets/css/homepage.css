@@ -209,7 +209,7 @@ circle {
 }
 
 #pokeButtonArrow {
-    background-color: #39c29c;
+    background-color: ;
     border-radius: 50%;
     width: 35px;
     height: 35px; 
@@ -218,7 +218,7 @@ circle {
     right: -40px;
     transform: translateY(-50%); 
     font-size: 1.5em;
-    color: white;
+    color: #39c29c;
     cursor: pointer;
     z-index: 3;
     display: flex; 
