@@ -111,13 +111,10 @@ tickets.nianticlabs.com
 
 /* Blue-Green Line */
 .bluegreen-line {
-    height: 5px;
+    height: 20px;
     background-color: #39c29c;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    margin: 0;
+    opacity: 100%;
 }
 
 /* Background Image */
