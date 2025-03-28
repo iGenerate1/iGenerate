@@ -546,13 +546,13 @@ h3{
     flex-wrap: wrap;
     width: 70%;
     padding-bottom: 10px;
+    margin-left: 10px;
 }
 
 .footer-logos img {
     height: 50px; 
     width: auto; 
 }
-
 
 .footer-logos a img[alt="Niantic Logo"] {
     width: 70px;
@@ -828,19 +828,6 @@ h3{
         margin-top: 20px;
         margin-left: 10px;
         gap: 1px;
-    }
-
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .footer-logos {
-        justify-content: flex-end;
-    }
-
-    .footer-social {
-        justify-content: flex-end;
     }
 }
 
