@@ -191,7 +191,7 @@ body {
 #borderSVG {
     position: absolute;
     width: 120px; 
-    height: 120px;
+    height: 120px; 
     z-index: 1; 
     pointer-events: none; 
 }
@@ -209,7 +209,7 @@ circle {
 }
 
 #pokeButtonArrow {
-    background-color: ;
+    background-color: #39c29c;
     border-radius: 50%;
     width: 35px;
     height: 35px; 
@@ -218,7 +218,7 @@ circle {
     right: -40px;
     transform: translateY(-50%); 
     font-size: 1.5em;
-    color: #39c29c;
+    color: white;
     cursor: pointer;
     z-index: 3;
     display: flex; 
