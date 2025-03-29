@@ -6,109 +6,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navbar Styling */
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures space between logo, nav-links, and button */
-    background-color: white;
-    padding: 10px 40px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centers the links */
-    flex-grow: 1; /* Allows it to take available space */
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 15px; /* Adds spacing between links */
-    font-size: 18px;
-}
-
-.nav-link .cart-icon {
-    font-size: 20px;
-    color: #007cc5;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links .cart-icon:hover {
-    color: #feca04; /* Change color on hover */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #007cc5;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
-    align-items: center;
-}
-
-#nav-links a:hover {
-    color: #feca04;
-}
-
-.nav-links a.active {
-    color: #feca04; /* Yellow for active link */
-}
-
-.sign-in-btn {
-    background-color: #feca04;
-    color: white;
-    border: none;
-    padding: 8px 45px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.sign-in-btn:hover {
-    background-color: #007cc5;
-}
-
-.sign-in-btn a {
-    color: white;
-    text-decoration: none;
-}
-
-.profile-btn {
-    background-color: #007cc5; /* Change to your theme color */
-    color: white;
-    border: none;
-    padding: 8px 40px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.profile-btn a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.profile-btn:hover {
-    background-color:#feca04; 
-}
-
-.profile-btn i {
-    font-size: 18px;
-}
-tickets.nianticlabs.com
-
-.sign-in-btn a {
-    text-decoration: none;
-    background-color: #ffcb05;
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: black;
-}
-
 /* Blue-Green Line */
 .bluegreen-line {
     height: 20px;
@@ -145,15 +42,15 @@ tickets.nianticlabs.com
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    background: transparent; 
+    background: transparent;
     overflow: hidden;
-    box-shadow: none; 
-    padding: 0; 
+    box-shadow: none;
+    padding: 0;
 }
 
 .form-section {
     width: 40%;
-    height: 56.5%; 
+    height: 56.5%;
     background-color: white;
     padding: 30px;
     text-align: center;
@@ -161,7 +58,14 @@ tickets.nianticlabs.com
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-section img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Apply rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Match the shadow of the form */
 }
 
 .background-image {
@@ -211,7 +115,7 @@ button {
 
 .footer-content {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: flex-start;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
@@ -251,7 +155,6 @@ button {
     width: auto; /* Maintain aspect ratio */
 }
 
-
 .footer-logos a img[alt="Niantic Logo"] {
     width: 70px;
     height: 80px;
@@ -269,20 +172,20 @@ button {
 
 .footer-social {
     flex-direction: column;
-    margin-left: auto; 
-    margin-right: 35px; 
-    align-items: center; 
+    margin-left: auto;
+    margin-right: 35px;
+    align-items: center;
     margin-bottom: 10px;
 }
 
 .footer-social a {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     margin-left: 10px;
 }
 
 .footer-social a img {
-    width: 24px; 
+    width: 24px;
     height: auto;
     padding-bottom: 10px;
 }
@@ -321,16 +224,8 @@ button {
     color: #ffffff;
 }
 
-
 /* Responsive Design */
 @media (min-width: 601px) and (max-width: 900px) {
-
-    .nav-links li {
-        padding-top: 10px;
-        margin: 5px 10px; /* Adds spacing between links */
-        font-size: 16px;
-    }
-
     /* Carousel */
     .carousel-item img {
         width: 100%;
@@ -349,7 +244,7 @@ button {
 
     #pokeButtonContainer {
         position: absolute;
-        top: 100px; 
+        top: 100px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -375,7 +270,6 @@ button {
     }
 
     /* Download banner */
-
     .download {
         width: 500px;
         height: 300px;
@@ -399,7 +293,6 @@ button {
         margin-right: 900px;
         font-size: 30px; /* Font size relative to viewport width */
         transform: translateX(1px);
-       
     }
 
     .app-stores {
@@ -437,14 +330,14 @@ button {
         margin-bottom: 0;
         left: 0px;
     }
-    
+
     .footer-logos img[alt="iGenerate Logo"] {
         width: 90px;
         height: 80px;
         margin-right: 0px;
         transform: translateX(-90px);
     }
-    
+
     .footer-logos a img[alt="Pokémon Logo"] {
         width: 100px;
         height: 14px;
@@ -455,7 +348,7 @@ button {
         align-self: center;
         justify-content: center;
     }
-    
+
     .footer-social a img {
         flex-direction: row;
         width: 24px;
@@ -464,7 +357,6 @@ button {
         transform: translateX(-390px);
     }
 }
-
 
 /* iPhone 14 Pro Max & similar (width ≤ 430px) */
 @media (max-width: 430px) {
