@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokéWebstore - Transaction History</title>
+    <title>PokéWebstore</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/transaction_history.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
 </head>
 
 <body>
@@ -24,73 +23,73 @@
             <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
             <li><a href="store_page.html" id="storeLink" class="nav-link">Store</a></li>
             <li><a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a></li>
-            <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink"
-                    class="nav-link">Event Ticketing</a></li>
+            <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink" class="nav-link">Event Ticketing</a></li>
         </ul>
-        <div class="profile-cart">
-            <img src="/assets/images/cart-icon.png" alt="Cart" class="cart-icon">
-            <img src="/assets/images/profile-picture.png" alt="Profile Picture" class="profile-icon">
-        </div>
     </nav>
-    <hr class="bluegreen-line">
-
-    <div class="transaction-history-container">
-        <div class="transaction-history-header">
+    <div class="transaction-header-container">
+        <div class="transaction-header">
             <h1>Transaction History</h1>
             <p>Track your past transactions here!</p>
         </div>
+    </div>
+    <hr class="bluegreen-line">
 
-        <a href="/Pages/store_page.html" class="back-link"> ← Back to Store</a>
+    <a href="/Pages/store_page.html" class="back-link-top"> ← Back to Store</a>
 
+    <div class="transaction-history-container">
         <div class="transaction-history-content">
-            <table class="transaction-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Item</th>
-                        <th>Order ID</th>
-                        <th>Transaction Number</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2025-03-14</td>
-                        <td>Pokémon GO Fest 2025: Global Ticket</td>
-                        <td>#PG0202501</td>
-                        <td>TXN-10012345</td>
-                        <td class="status completed">Completed</td>
-                    </tr>
-                    <tr>
-                        <td>2025-03-15</td>
-                        <td>Ultra Hatch Box</td>
-                        <td>#PG0202502</td>
-                        <td>TXN-10012346</td>
-                        <td class="status redeemed">Redeemed</td>
-                    </tr>
-                    <tr>
-                        <td>2025-03-16</td>
-                        <td>Mega Absol Raid Day Ultra Ticket Box</td>
-                        <td>#PG0202503</td>
-                        <td>TXN-10012347</td>
-                        <td class="status pending">Pending</td>
-                    </tr>
-                    <tr>
-                        <td>2025-03-17</td>
-                        <td>Deep Depths Ultra Ticket Box</td>
-                        <td>#PG0202504</td>
-                        <td>TXN-10012348</td>
-                        <td class="status completed">Completed</td>
-                    </tr>
-                    <tr>
-                        <td>2025-03-18</td>
-                        <td>Super Incubator (2-Pack)</td>
-                        <td>#PG0202505</td>
-                        <td>TXN-10012349</td>
-                        <td class="status refunded">Refunded</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="transaction-row-container transaction-header-row">
+                <div class="transaction-column">Date</div>
+                <div class="transaction-column">Item</div>
+                <div class="transaction-column">Order ID</div>
+                <div class="transaction-column">Transaction Number</div>
+                <div class="transaction-column">Status</div>
+            </div>
+            <div class="transaction-row-container">
+                <div class="transaction-row">
+                    <div class="transaction-column">2025-03-14</div>
+                    <div class="transaction-column">Pokémon GO Fest 2025: Global Ticket</div>
+                    <div class="transaction-column">#PG0202501</div>
+                    <div class="transaction-column">TXN-10012345</div>
+                    <div class="transaction-column status completed">Completed</div>
+                </div>
+            </div>
+            <div class="transaction-row-container">
+                <div class="transaction-row">
+                    <div class="transaction-column">2025-03-15</div>
+                    <div class="transaction-column">Ultra Hatch Box</div>
+                    <div class="transaction-column">#PG0202502</div>
+                    <div class="transaction-column">TXN-10012346</div>
+                    <div class="transaction-column status redeemed">Redeemed</div>
+                </div>
+            </div>
+            <div class="transaction-row-container">
+                <div class="transaction-row">
+                    <div class="transaction-column">2025-03-16</div>
+                    <div class="transaction-column">Mega Absol Raid Day Ultra Ticket Box</div>
+                    <div class="transaction-column">#PG0202503</div>
+                    <div class="transaction-column">TXN-10012347</div>
+                    <div class="transaction-column status pending">Pending</div>
+                </div>
+            </div>
+            <div class="transaction-row-container">
+                <div class="transaction-row">
+                    <div class="transaction-column">2025-03-17</div>
+                    <div class="transaction-column">Deep Depths Ultra Ticket Box</div>
+                    <div class="transaction-column">#PG0202504</div>
+                    <div class="transaction-column">TXN-10012348</div>
+                    <div class="transaction-column status completed">Completed</div>
+                </div>
+            </div>
+            <div class="transaction-row-container">
+                <div class="transaction-row">
+                    <div class="transaction-column">2025-03-18</div>
+                    <div class="transaction-column">Super Incubator (2-Pack)</div>
+                    <div class="transaction-column">#PG0202505</div>
+                    <div class="transaction-column">TXN-10012349</div>
+                    <div class="transaction-column status refunded">Refunded</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -141,9 +140,7 @@
                 <a href="https://nianticlabs.com/ip-policy">Copyright Policy</a>
                 <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
             </div>
-            <p>©2025 Niantic, Inc. ©Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images
-                used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no
-                copyright infringement is intended.</p>
+            <p>©2025 Niantic, Inc. ©Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no copyright infringement is intended.</p>
         </div>
     </footer>
     <script src="/assets/js/homepage.js"></script>
