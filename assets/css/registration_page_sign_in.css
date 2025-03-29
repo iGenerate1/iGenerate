@@ -17,22 +17,22 @@ body {
 
 /* Social Icons */
 .social-icons img {
-    width: 40px; 
-    height: 40px; 
-    margin: 5px; 
-    object-fit: contain; 
-    cursor: pointer; 
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    object-fit: contain;
+    cursor: pointer;
 }
 
 .social-icons img:hover {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 /* Background Image */
 .background-image {
     position: absolute;
     top: 0;
-    left: -10px; 
+    left: -10px;
     width: 60%;
     height: 100vh;
     background-size: cover;
@@ -69,7 +69,7 @@ body {
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; 
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -97,8 +97,8 @@ form input {
 
 /* Button */
 button {
-    width: 90%;
-    max-width: 55%;
+    width: 90%; /* Match input width */
+    max-width: 100%; /* Match input max-width */
     padding: 10px;
     background-color: #2a75bb;
     color: white;
@@ -106,11 +106,11 @@ button {
     border-radius: 50px !important;
     cursor: pointer;
     box-sizing: border-box;
-    transition: opacity 0.3s; /* Smooth effect */
+    transition: opacity 0.3s;
 }
 
 button:hover {
-    opacity: 0.8; /* Button opacity reduced on hover */
+    opacity: 0.8;
 }
 
 /* Remember Me Section */
@@ -149,7 +149,7 @@ button:hover {
 }
 
 .remember-section input[type="checkbox"]:checked {
-    background-color: #2a75bb; 
+    background-color: #2a75bb;
     border-color: #2a75bb;
 }
 
@@ -166,7 +166,7 @@ button:hover {
 
 /* FOOTER */
 .footer {
-    background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
+    background-image: linear-gradient(to right, #528e88, #41707d, #5396a8);
     padding: 20px;
     color: #ffffff;
 }
@@ -179,7 +179,7 @@ button:hover {
     padding-bottom: 20px;
 }
 
-.footer-content a:hover{
+.footer-content a:hover {
     text-decoration: underline;
 }
 
@@ -209,8 +209,8 @@ button:hover {
 }
 
 .footer-logos img {
-    height: 50px; /* Adjust to a consistent height */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px;
+    width: auto;
 }
 
 .footer-logos a img[alt="Niantic Logo"] {
@@ -248,7 +248,7 @@ button:hover {
     padding-bottom: 10px;
 }
 
-.footer-social img[alt="Facebook Logo"]{
+.footer-social img[alt="Facebook Logo"] {
     height: 35px;
     width: 35px;
     padding-right: 10px;
