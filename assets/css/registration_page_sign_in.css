@@ -16,12 +16,11 @@ body {
 
 /* Background Image */
 .background-image {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 40%;
+    left: -10px; 
+    width: 60%;
     height: 100vh;
-    background: url('/assets/images/profile-page-banner.webp') no-repeat center center;
     background-size: cover;
 }
 
@@ -46,6 +45,7 @@ body {
     overflow: hidden;
     box-shadow: none;
     padding: 0;
+    transform: translateX(-125px); 
 }
 
 .form-section {
@@ -62,19 +62,18 @@ body {
 }
 
 .image-section img {
-    width: 100%; /* Ensure the image takes the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Apply rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Match the shadow of the form */
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .background-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%; /* Adjust width to fit the image */
+    width: 60%; 
     height: 100vh;
-    background: url('/assets/images/profile-page-banner.webp') no-repeat center center;
     background-size: cover;
 }
 
