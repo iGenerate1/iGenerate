@@ -1,6 +1,6 @@
 //Adding cart button to the navbar when the user is logged in
 document.addEventListener("DOMContentLoaded", () =>{
-    const isLoggedIn = false; //false to test without login and true if logged in
+    const isLoggedIn = true; //false to test without login and true if logged in
 
         if (isLoggedIn) {
             const navLinks = document.getElementById('nav-links');
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 //The sign in button will be replaced with profile button when the user is logged in
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = false; //false to test without login and true if logged in
+    const isLoggedIn = true; //false to test without login and true if logged in
 
     const signInButton = document.querySelector(".sign-in-btn");
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Once the user is signed in, they will be greeted
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = false; //false to test without login and true if logged in
+    const isLoggedIn = true; //false to test without login and true if logged in
     const username = "TRAINER"; 
 
     if (isLoggedIn) {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Once the user is logged in, the bundle section will be displayed
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "false"; 
 
     const bundlesContainer = document.querySelector(".bundle-content");
