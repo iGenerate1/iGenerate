@@ -1,24 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript loaded!");
-});
-
-//Adding cart button to the navbar when the user is logged in
-document.addEventListener("DOMContentLoaded", () =>{
-    const isLoggedIn = true; //false to test without login and true if logged in
-
-        if (isLoggedIn) {
-            const navLinks = document.getElementById('nav-links');
-            const cartItem = document.createElement('li');
-
-            cartItem.innerHTML = `
-                <a href="cart.html" class="nav-link" title="Cart">
-                    <i class="fas fa-shopping-cart cart-icon"></i>
-                </a>
-            `;
-
-            navLinks.appendChild(cartItem);
-        }
-});
 
 //The sign in button will be replaced with profile button when the user is logged in
 document.addEventListener("DOMContentLoaded", () => {

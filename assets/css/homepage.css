@@ -5,7 +5,7 @@ body {
     background-color: #e5f3efd5;
 }
 
-/* Navbar Styling - HEADER CSS MOVED TO SEPARATE FILE - IMPORTED*/
+
 
 /* Hero Section Styling */
 .carousel-item {
@@ -536,12 +536,7 @@ h3{
 /* FINAL - Tablet/iPad (width ≤ 900px) */
 @media (max-width: 900px) {
 
-    /* Navbar */
-    .nav-links li {
-        padding-top: 10px;
-        margin: 5px 10px; /* Adds spacing between links */
-        font-size: 14px;
-    }
+
 
     /* Carousel */
     .carousel-item img {
