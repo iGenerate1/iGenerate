@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,26 +6,13 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background: #0080ff;
-    color: white;
+/* Blue-Green Line */
+.bluegreen-line {
+    height: 20px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
 }
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.navbar a, .sign-out {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .profile-container {
     width: 80%;
     margin: 20px auto;
