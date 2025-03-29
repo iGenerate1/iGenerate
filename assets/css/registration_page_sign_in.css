@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 /* Blue-Green Line */
@@ -14,7 +15,7 @@ body {
     opacity: 100%;
 }
 
-/* Account Icons */
+/* Social Icons */
 .social-icons img {
     width: 40px; 
     height: 40px; 
@@ -35,13 +36,8 @@ body {
     width: 60%;
     height: 100vh;
     background-size: cover;
-}
-
-.pokemon-logo-overlay {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 120px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 /* Sign-In Section */
@@ -58,9 +54,10 @@ body {
     overflow: hidden;
     box-shadow: none;
     padding: 0;
-    transform: translateX(-125px); 
+    transform: translateX(-125px);
 }
 
+/* Form Section */
 .form-section {
     width: 40%;
     height: 56.5%;
@@ -72,72 +69,100 @@ body {
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    box-sizing: border-box;
 }
 
 .form-section h2 {
     margin-bottom: 15px;
 }
 
-form input {
+form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields */
+form input {
+    width: 90%;
+    max-width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Button */
 button {
-    width: 60%;
+    width: 90%;
+    max-width: 55%;
     padding: 10px;
     background-color: #2a75bb;
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 50px !important;
     cursor: pointer;
+    box-sizing: border-box;
+    transition: opacity 0.3s; /* Smooth effect */
 }
 
+button:hover {
+    opacity: 0.8; /* Button opacity reduced on hover */
+}
+
+/* Remember Me Section */
 .remember-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
     color: #333;
-    padding-left: 10px; 
+    width: 90%;
+    max-width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
 }
 
+/* Remember Me Checkbox */
 .remember-section label {
     display: flex;
     align-items: center;
     gap: 5px;
     cursor: pointer;
-    margin-left: 0; 
-    transform: translateX(35px); 
+    margin-left: 0;
 }
 
 .remember-section input[type="checkbox"] {
     appearance: none;
-    width: 6px;
-    height: 6px;
+    width: 16px;
+    height: 16px;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: white;
     cursor: pointer;
     display: inline-block;
     position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
+.remember-section input[type="checkbox"]:checked {
+    background-color: #2a75bb; 
+    border-color: #2a75bb;
+}
+
+/* Forgot Password Link */
 .remember-section a {
     text-decoration: none;
-    color: #2a75bb;
-    margin-left: 0; /* Aligned left */
-    transform: translateX(-50px); /* Moved even further left */
+    color: #333;
 }
 
 .remember-section a:hover {
+    color: #2a75bb;
     text-decoration: underline;
 }
-
-
 
 /* FOOTER */
 .footer {
@@ -255,183 +280,4 @@ button {
 .footer-bottom p {
     font-size: 0.8em;
     color: #ffffff;
-}
-
-/* Responsive Design */
-@media (min-width: 601px) and (max-width: 900px) {
-    /* Carousel */
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-item h1 {
-        font-size: 1.5rem;
-        padding-left: 20px;
-    }
-
-    .carousel-item p {
-        font-size: 1rem;
-        padding-left: 20px;
-    }
-
-    #pokeButtonContainer {
-        position: absolute;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        margin-left: 0;
-    }
-
-    /* Featured items */
-    h3{
-        margin-right: 50px; /* right margin */
-    }
-
-    .featured {
-        width: 500px;
-        height: 300px;
-    }
-
-    .featured-item {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    /* Download banner */
-    .download {
-        width: 500px;
-        height: 300px;
-        padding: 9px;
-        padding-bottom: 60px;
-    }
-
-    .download-banner {
-        padding: 40px;
-        font-size: 15px;
-    }
-
-    .download-logo{
-        padding-left: 30px;
-        width: 150px;
-        margin-left: 20px;
-        transform: translateX(14px);
-    }
-
-    .download-text h2 {
-        margin-right: 900px;
-        font-size: 30px; /* Font size relative to viewport width */
-        transform: translateX(1px);
-    }
-
-    .app-stores {
-        justify-content: center;
-        width: 10px;
-        height: 10px;
-        padding-right: 800px;
-        gap: 1px;
-        transform: translateX(-34px);
-    }
-
-    .app-stores button img{
-        margin-top: 20px;
-        margin-left: 10px;
-        gap: 1px;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .footer-logos{
-        display: flex;
-        justify-content: flex-start;
-        gap: 1rem;
-        justify-content: center;
-        transform: translateX(-400px);
-    }
-    .footer-logos a img[alt="Niantic Logo"] {
-        width: 70px;
-        height: 80px;
-        margin-bottom: 0;
-        left: 0px;
-    }
-
-    .footer-logos img[alt="iGenerate Logo"] {
-        width: 90px;
-        height: 80px;
-        margin-right: 0px;
-        transform: translateX(-90px);
-    }
-
-    .footer-logos a img[alt="Pokémon Logo"] {
-        width: 100px;
-        height: 14px;
-        margin-top: 40px;
-        margin-bottom: 0;
-        margin-right: 100px;
-        margin-left: 0px;
-        align-self: center;
-        justify-content: center;
-    }
-
-    .footer-social a img {
-        flex-direction: row;
-        width: 24px;
-        height: auto;
-        padding-bottom: 10px;
-        transform: translateX(-390px);
-    }
-}
-
-/* iPhone 14 Pro Max & similar (width ≤ 430px) */
-@media (max-width: 430px) {
-    /* Carousel */
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-item h1 {
-        font-size: 1.5rem;
-    }
-
-    .carousel-item p {
-        font-size: 0.9rem;
-    }
-
-    /* Featured items */
-    .featured-item {
-        padding: 0.8rem;
-        font-size: 0.85rem;
-    }
-
-    /* Download banner */
-    .download-banner {
-        padding: 0.8rem;
-        font-size: 0.85rem;
-    }
-
-    /* Footer - stack for visibility */
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-logos,
-    .footer-socials {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
 }
