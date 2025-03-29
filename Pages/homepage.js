@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript loaded!");
+});
+
 //Adding cart button to the navbar when the user is logged in
 document.addEventListener("DOMContentLoaded", () =>{
     const isLoggedIn = true; //false to test without login and true if logged in
