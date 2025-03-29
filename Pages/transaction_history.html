@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéWebstore - Transaction History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/transaction_history.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
+            <li><a href="store_page.html" id="storeLink" class="nav-link">Store</a></li>
+            <li><a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a></li>
+            <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink"
+                    class="nav-link">Event Ticketing</a></li>
+        </ul>
+        <div class="profile-cart">
+            <img src="/assets/images/cart-icon.png" alt="Cart" class="cart-icon">
+            <img src="/assets/images/profile-picture.png" alt="Profile Picture" class="profile-icon">
+        </div>
+    </nav>
+    <hr class="bluegreen-line">
+
+    <div class="transaction-history-container">
+        <div class="transaction-history-header">
+            <h1>Transaction History</h1>
+            <p>Track your past transactions here!</p>
+        </div>
+
+        <a href="/Pages/store_page.html" class="back-link"> ← Back to Store</a>
+
+        <div class="transaction-history-content">
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Item</th>
+                        <th>Order ID</th>
+                        <th>Transaction Number</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-03-14</td>
+                        <td>Pokémon GO Fest 2025: Global Ticket</td>
+                        <td>#PG0202501</td>
+                        <td>TXN-10012345</td>
+                        <td class="status completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-15</td>
+                        <td>Ultra Hatch Box</td>
+                        <td>#PG0202502</td>
+                        <td>TXN-10012346</td>
+                        <td class="status redeemed">Redeemed</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-16</td>
+                        <td>Mega Absol Raid Day Ultra Ticket Box</td>
+                        <td>#PG0202503</td>
+                        <td>TXN-10012347</td>
+                        <td class="status pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-17</td>
+                        <td>Deep Depths Ultra Ticket Box</td>
+                        <td>#PG0202504</td>
+                        <td>TXN-10012348</td>
+                        <td class="status completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-18</td>
+                        <td>Super Incubator (2-Pack)</td>
+                        <td>#PG0202505</td>
+                        <td>TXN-10012349</td>
+                        <td class="status refunded">Refunded</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr class="bluegreen-line">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="https://pokemongolive.com/">Pokémon GO Live</a>
+                    <a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
+                    <a href="https://pokemongolive.com/events">Events</a>
+                    <a href="https://pokemongolive.com/news">News</a>
+                </div>
+                <div class="footer-column">
+                    <a href="https://store.pokemongolive.com/support">Support</a>
+                    <a href="https://store.pokemongolive.com/offer-redemption">Code Redemption</a>
+                    <a href="https://pokemongolive.com/community-day/map">Community Day Map</a>
+                </div>
+            </div>
+            <div class="footer-logos">
+                <a href="https://nianticlabs.com/">
+                    <img src="/assets/images/niantic logo.png" alt="Niantic Logo">
+                </a>
+                <a href="https://www.pokemon.com/us">
+                    <img src="/assets/images/pokemon company.webp" alt="Pokémon Logo">
+                </a>
+                <img src="/assets/images/igenerate.png" alt="iGenerate Logo">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@pokemongo">
+                    <img src="/assets/images/youtube.png" alt="YouTube Logo">
+                </a>
+                <a href="https://www.facebook.com/PokemonGO/">
+                    <img src="/assets/images/fb.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/pokemongoapp/">
+                    <img src="/assets/images/ig.png" alt="Instagram Logo">
+                </a>
+                <a href="https://www.tiktok.com/@pokemongo">
+                    <img src="/assets/images/tiktok.png" alt="TikTok Logo">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="https://nianticlabs.com/terms">Terms of Service</a>
+                <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+                <a href="https://nianticlabs.com/ip-policy">Copyright Policy</a>
+                <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+            </div>
+            <p>©2025 Niantic, Inc. ©Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images
+                used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no
+                copyright infringement is intended.</p>
+        </div>
+    </footer>
+    <script src="/assets/js/homepage.js"></script>
+</body>
+
+</html>
