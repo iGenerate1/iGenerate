@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Once the user is logged in, the bundle section will be displayed
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "false"; 
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; 
 
     const bundlesContainer = document.querySelector(".bundle-content");
     const title = document.getElementById("bundles-title");
