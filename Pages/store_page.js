@@ -1,9 +1,43 @@
-//Active links for the current page
 document.addEventListener("DOMContentLoaded", () => {
-    //Get the current URL path without parameters
+    const isLoggedIn = true; // Set to false to test without login and true if logged in
+
+    const navLinks = document.getElementById('nav-links');
+    const signInButton = document.querySelector(".sign-in-btn");
+    const userButtonsContainer = document.querySelector(".user-buttons");
+
+    if (isLoggedIn) {
+        // Create the profile button
+        const profileButton = document.createElement("button");
+        profileButton.classList.add("profile-btn"); // Add the profile button class for CSS
+        profileButton.innerHTML = `
+            <a href="profile_page.html" id="profileLink">
+                <i class="fas fa-user"></i>
+            </a>
+        `;
+
+        // Replace the sign-in button with the profile button
+        signInButton.replaceWith(profileButton);
+
+        // Create the cart button
+        const cartButton = document.createElement("button");
+        cartButton.classList.add("cart-btn"); // Add the cart button class for CSS
+        cartButton.innerHTML = `
+            <a href="cart.html" class="nav-link" title="Cart">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </a>
+        `;
+
+        // Insert the cart button before the profile button
+        userButtonsContainer.insertBefore(cartButton, profileButton);
+    }
+});
+
+// Active links for the current page
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the current URL path without parameters
     let currentPath = window.location.pathname.split("/").pop() || "";
 
-    //Define page links with corresponding IDs
+    // Define page links with corresponding IDs
     let pages = {
         "homepage.html": "homeLink",
         "store_page.html": "storeLink",
@@ -11,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 
-    //Set active class for the matching link
+    // Set active class for the matching link
     if (pages[currentPath]) {
         document.getElementById(pages[currentPath]).classList.add("active");
-}
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -32,7 +66,7 @@ function setActiveTab(clickedTab) {
     clickedTab.classList.add("active");
 }
 
-function showCategory(category) { 
+function showCategory(category) {
     document.querySelectorAll('.store-category').forEach(div => {
         div.classList.remove('active-category');
     });
@@ -45,11 +79,7 @@ function showCategory(category) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Simulate login status
-    // const isLoggedIn = false; // Set to true to simulate a logged-in user
-
     const bundlesContainer = document.getElementById("bundle-container");
-   // const signInPromptContainer = document.getElementById("sign-in-prompt-container");
 
     // Bundle data with categories
     const bundles = [
@@ -106,22 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 bundlesContainer.appendChild(bundleDiv);
             }
         });
-            /*
-        // If not logged in and viewing daily bundles, show sign-in prompt
-        if (!isLoggedIn && filterCategory === 'daily-bundles') {
-            signInPromptContainer.innerHTML = `
-                <div class="sign-in-prompt">
-                    <h4>Sign in to View</h4>
-                    <p>Please sign in to view and purchase Daily Bundles.</p>
-                    <button class="sign-in-btn-card" onclick="window.location.href='signin_page.html'">Sign In</button>
-                </div>
-            `;
-        } else {
-            signInPromptContainer.innerHTML = ""; // Clear the prompt if not needed
-        }
-            */
     }
-        
 
     // Function to handle add to cart logic
     window.handleAddToCart = function() {

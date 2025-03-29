@@ -9,7 +9,7 @@ body {
 #navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between logo, nav-links, and button */
+    justify-content: space-between;
     background-color: white;
     padding: 10px 40px;
 }
@@ -17,13 +17,13 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centers the links */
-    flex-grow: 1; /* Allows it to take available space */
+    justify-content: center;
+    flex-grow: 1;
     padding: 0;
 }
 
 .nav-links li {
-    margin: 0 15px; /* Adds spacing between links */
+    margin: 0 15px;
     font-size: 18px;
 }
 
@@ -34,7 +34,22 @@ body {
 }
 
 .nav-links .cart-icon:hover {
-    color: #feca04; /* Change color on hover */
+    color: #feca04;
+}
+
+.cart-btn {
+    font-size: 20px;
+    color: #007cc5;
+    transition: color 0.3s ease-in-out;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+    width: auto;
+    height: 100%;
+}
+
+.cart-btn:hover {
+    color: #feca04;
 }
 
 .nav-links a {
@@ -51,17 +66,23 @@ body {
 }
 
 .nav-links a.active {
-    color: #feca04; /* Yellow for active link */
+    color: #feca04;
+}
+
+.user-buttons {
+    display: flex;
+    align-items: center;
 }
 
 .sign-in-btn {
     background-color: #feca04;
     color: white;
     border: none;
-    padding: 8px 45px;
+    padding: 8px 20px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .sign-in-btn:hover {
@@ -71,6 +92,13 @@ body {
 .sign-in-btn a {
     color: white;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-btn i, .cart-btn i {
+    font-size: 18px;
 }
 
 .profile-btn {
@@ -99,11 +127,11 @@ body {
     font-size: 18px;
 }
 
-
+.cart-icon:hover {
+    color: #feca04;
+}
 
 /* hero section */
-/* HERO CONTAINER */
-/* HERO SECTION */
 .hero-section {
     background-image: url(/assets/images/store-featured.png);
     height: 40vh;
@@ -114,31 +142,26 @@ body {
     z-index: -1;
 }
 
-/* HERO TEXT */
-
 .hero-text {
     color: #ffffff;
     text-align: left;
-    left: 5%; 
+    left: 5%;
     right: auto;
-    bottom: 20%; 
-    width: 50%; 
+    bottom: 20%;
+    width: 50%;
     margin-bottom: 30px;
     margin-left: 20px;
     top: 10%;
-        text-shadow: 
-            2px 2px 5px rgba(46, 40, 40, 0.3), 
-            -2px -2px 5px rgba(46, 40, 40, 0.3), 
-            3px -3px 5px rgba(46, 40, 40, 0.2), 
-            -3px 3px 5px rgba(46, 40, 40, 0.2);
-    }
-    
-
+    text-shadow:
+        2px 2px 5px rgba(46, 40, 40, 0.3),
+        -2px -2px 5px rgba(46, 40, 40, 0.3),
+        3px -3px 5px rgba(46, 40, 40, 0.2),
+        -3px 3px 5px rgba(46, 40, 40, 0.2);
+}
 
 .hero-text h1 {
-    
     margin-top: 0px;
-    font-size: 5.5rem; 
+    font-size: 5.5rem;
     font-weight: bold;
     z-index: 1;
 }
@@ -149,60 +172,68 @@ body {
     z-index: 1;
 }
 
-/* POKEMON CONTAINER */
 .pokemon-container {
     display: flex;
-    gap: 80px; /* Increased gap between Pokémon */
+    gap: 80px;
     width: auto;
     height: 60%;
     position: absolute;
-    bottom: 10px; /* Position under the text */
-    animation: slide 20s linear infinite; /* Move from left to right */
+    bottom: 10px;
+    animation: slide 20s linear infinite;
     z-index: -2;
 }
 
 .left-row {
-    left: -100%; /* Start off-screen from the left */
+    left: -100%;
     animation-name: slideRight;
     z-index: -1;
 }
 
 .right-row {
-    right: -100%; /* Start off-screen from the right */
+    right: -100%;
     animation-name: slideLeft;
 }
 
-/* INDIVIDUAL POKEMON */
 .pokemon {
-    margin: 0 60px; /* spacing between Pokémon */
+    margin: 0 60px;
     width: 120px;
     animation: float 5s infinite alternate ease-in-out;
     z-index: -1;
 }
 
-/* FLOATING EFFECT */
 @keyframes float {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-30px); }
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
 }
 
-/* SLIDING EFFECTS */
 @keyframes slideRight {
-    0% { left: -100%; }
-    100% { left: 100%; }
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 @keyframes slideLeft {
-    0% { right: -100%; }
-    100% { right: 100%; }
-    100% { transform: translateY(-140px); }
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+    100% {
+        transform: translateY(-140px);
+    }
 }
 
-/* Featured Section */
-
-h3{
+h3 {
     margin-left: 35px;
-    font-size: 1.5em;;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
@@ -210,8 +241,7 @@ h3{
 }
 
 .featured {
-    background-image: linear-gradient(to right, #065380 , #5ea4bb);
-    /* set background image to store-featured.png */
+    background-image: linear-gradient(to right, #065380, #5ea4bb);
     color: white;
     margin: 10px auto 60px;
     width: 150%;
@@ -246,9 +276,6 @@ h3{
     margin-top: 5px;
 }
 
-
-
-/* Tabs Navigation */
 .store-tabs {
     display: flex;
     justify-content: center;
@@ -258,7 +285,6 @@ h3{
     font-weight: bold;
 }
 
-/* Tab Links (Text Only) */
 .tab-btn {
     background: none;
     border: none;
@@ -271,28 +297,23 @@ h3{
     align-items: center;
 }
 
-/* Active Tab Styling */
 .tab-btn.active {
-    color: #feca04; /* Yellow for active tab */
-    /* Optional: Add a bottom border for active tab */
-    border-bottom: 2px solid #feca04; /* Yellow underline for active tab */
+    color: #feca04;
+    border-bottom: 2px solid #feca04;
 }
 
-/* Reserve Space for the Icon in All Tabs */
 .tab-btn::before {
-    content: "⚡"; /* Placeholder icon */
+    content: "⚡";
     color: #feca04;
     font-size: 18px;
     margin-right: 5px;
-    visibility: hidden;  /* Hides icon by default but reserves space */
+    visibility: hidden;
 }
 
-/* Make the Icon Visible Only for the Active 'Item Boxes' Tab */
 .tab-btn.active::before {
     visibility: visible;
 }
 
-/* Store Section */
 .store {
     width: 90%;
     max-width: 1000px;
@@ -300,7 +321,6 @@ h3{
     text-align: center;
 }
 
-/* Grid Layout for 3x3 Cards */
 .bundle-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,7 +331,6 @@ h3{
     width: auto;
 }
 
-/* Bundle Card */
 .bundle-card {
     background-color: white;
     border-radius: 15px;
@@ -320,14 +339,12 @@ h3{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Box & Item Icons (Single Image) */
 .bundle-card img {
     width: autoh;
     height: 12vh;
     margin-bottom: 10px;
 }
 
-/* Bundle Info */
 .bundle-card h4 {
     font-size: 1.2em;
     color: #007cc5;
@@ -342,8 +359,7 @@ h3{
     padding: 0;
 }
 
-/* Price Styling (Matches .view-button Style) */
-.price { 
+.price {
     background-color: white;
     color: #feca04;
     padding: 10px 40px;
@@ -353,7 +369,6 @@ h3{
     margin-bottom: 10px;
 }
 
-/* Add Button (Centered) */
 .add-btn {
     background: #007cc5;
     color: white;
@@ -366,7 +381,7 @@ h3{
     align-items: center;
     justify-content: center;
     gap: 5px;
-    margin: auto; /* Center horizontally */
+    margin: auto;
     width: fit-content;
 }
 
@@ -378,11 +393,6 @@ h3{
     background: #005fa3;
 }
 
-
-
-
-
-/* Style for the sign-in prompt container */
 #sign-in-prompt-container {
     display: flex;
     justify-content: center;
@@ -402,7 +412,6 @@ h3{
     width: 100%;
 }
 
-/* Style for the sign-in button */
 .sign-in-btn-card {
     background-color: #007cc5;
     color: white;
@@ -417,23 +426,21 @@ h3{
     background-color: #005f8a;
 }
 
-/* FOOTER */
-
 footer {
-    background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
+    background-image: linear-gradient(to right, #528e88, #41707d, #5396a8);
     padding: 20px;
     color: #ffffff;
 }
 
 .footer-content {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: flex-start;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 }
 
-.footer-content a:hover{
+.footer-content a:hover {
     text-decoration: underline;
 }
 
@@ -455,18 +462,16 @@ footer {
 
 .footer-logos {
     display: flex;
-    justify-content: center; /* Centers logos horizontally */
-    align-items: center; /* Aligns logos vertically */
-    gap: 40px; /* Ensures even spacing between logos */
-    margin-top: 20px; /* Adjust margin as needed */
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
     padding-left: 430px;
 }
 
 .footer-logos img {
-    height: 50px; /* Adjust to a consistent height */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px;
+    width: auto;
 }
-
 
 .footer-logos a img[alt="Niantic Logo"] {
     width: 70px;
@@ -485,25 +490,25 @@ footer {
 
 .footer-social {
     flex-direction: column;
-    margin-left: auto; 
-    margin-right: 35px; 
-    align-items: center; 
+    margin-left: auto;
+    margin-right: 35px;
+    align-items: center;
     margin-bottom: 10px;
 }
 
 .footer-social a {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     margin-left: 10px;
 }
 
 .footer-social a img {
-    width: 24px; 
+    width: 24px;
     height: auto;
     padding-bottom: 10px;
 }
 
-.footer-social img[alt="Facebook Logo"]{
+.footer-social img[alt="Facebook Logo"] {
     height: 35px;
     width: 35px;
     padding-right: 10px;
@@ -537,16 +542,13 @@ footer {
     color: #ffffff;
 }
 
-/* Responsive Design */
 @media (min-width: 601px) and (max-width: 900px) {
-
     .nav-links li {
         padding-top: 10px;
-        margin: 5px 10px; /* Adds spacing between links */
+        margin: 5px 10px;
         font-size: 16px;
     }
 
-    /* Carousel */
     .carousel-item img {
         width: 100%;
         height: auto;
@@ -564,7 +566,7 @@ footer {
 
     #pokeButtonContainer {
         position: absolute;
-        top: 100px; 
+        top: 100px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -573,3 +575,4 @@ footer {
         z-index: 10;
         margin-left: 0;
     }
+}
