@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = true; // Set to false to test without login and true if logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = localStorage.getItem("username") || "TRAINER"; // Default username
+    console.log("User logged in:", isLoggedIn); // Debugging
 
-    const navLinks = document.getElementById('nav-links');
     const signInButton = document.querySelector(".sign-in-btn");
-    const userButtonsContainer = document.querySelector(".user-buttons");
-
-    if (isLoggedIn) {
-        // Create the profile button
+    if (signInButton && isLoggedIn) {
         const profileButton = document.createElement("button");
-        profileButton.classList.add("profile-btn"); // Add the profile button class for CSS
+        profileButton.classList.add("profile-btn");
         profileButton.innerHTML = `
-            <a href="profile_page.html" id="profileLink">
-                <i class="fas fa-user"></i>
-            </a>
+            <i class="fas fa-user"></i>
         `;
 
-        // Replace the sign-in button with the profile button
+        // Append event listener to navigate to profile page
+        profileButton.addEventListener("click", () => {
+            window.location.href = "profile_page.html"; // Change this to your actual profile page URL
+        });
+
         signInButton.replaceWith(profileButton);
 
         // Create the cart button

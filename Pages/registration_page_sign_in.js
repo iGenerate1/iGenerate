@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.style.display = "flex";
 
             setTimeout(() => {
-                window.location.href = "dashboard.html"; // Redirect to dashboard
+                window.location.href = "homepage.html"; // Redirect to homepage
             }, 2000);
         } else {
             popupMessage.textContent = "Invalid email or password.";

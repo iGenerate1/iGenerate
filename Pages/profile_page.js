@@ -1,47 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-// Check if the user is logged in
+    console.log("DOM fully loaded and parsed.");
+    
+    // Get user data from localStorage
     const userData = JSON.parse(localStorage.getItem("user"));
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
+    // Handle Sign-In Button Replacement with Profile Button
     const signInButton = document.querySelector(".sign-in-btn");
+    if (signInButton && isLoggedIn) {
+        console.log("User is logged in, replacing sign-in button with profile button.");
 
-    if (userData) {
-        // Replace sign-in button with profile button
         const profileButton = document.createElement("button");
         profileButton.classList.add("profile-btn");
-
-        profileButton.innerHTML = `
-            <a href="profile_page.html" id="profileLink">
-                <i class="fas fa-user"></i>
-            </a>
-        `;
+        profileButton.innerHTML = `<a href="profile_page.html" id="profileLink"><i class="fas fa-user"></i></a>`;
 
         signInButton.replaceWith(profileButton);
-
-        // Populate profile page if user data exists
-        if (document.querySelector(".user-name")) {
-            document.querySelector(".user-name").textContent = userData.ign;
-            document.querySelector(".poke-coins").textContent = userData.pokeCoins;
-            document.querySelector(".email").textContent = userData.email;
-            document.querySelector(".id-number").textContent = userData.playerID;
-            document.querySelector(".ign").textContent = userData.ign;
-            document.querySelector(".level-value").textContent = userData.level;
-            document.querySelector(".profile-pic").src = userData.profileImage;
-
-            const levelProgress = document.querySelector(".level-progress");
-            levelProgress.style.width = `${(userData.level / 50) * 100}%`;
-        }
     }
 
-    // Handle sign-out
+    // Populate Profile Page if User is Logged In
+    if (userData) {
+        console.log("Populating profile page with user data.");
+
+        document.querySelector(".user-name").textContent = userData.ign;
+        document.querySelector(".poke-coins").textContent = userData.pokeCoins;
+        document.querySelector(".email").textContent = userData.email;
+        document.querySelector(".id-number").textContent = userData.playerID;
+        document.querySelector(".ign").textContent = userData.ign;
+        document.querySelector(".level-value").textContent = userData.level;
+        document.querySelector(".profile-pic").src = userData.profileImage;
+
+        const levelProgress = document.querySelector(".level-progress");
+        levelProgress.style.width = `${(userData.level / 50) * 100}%`;
+    }
+
+    // Handle Sign-Out Button
     const signOutButton = document.querySelector(".sign-out");
     if (signOutButton) {
+        console.log("Sign-out button found, adding event listener.");
+        
         signOutButton.addEventListener("click", () => {
+            console.log("Sign-out button clicked! Logging out...");
+
+            // Remove user data from localStorage
             localStorage.removeItem("user");
-            window.location.href = "registration_page_sign_in.html";
+            localStorage.removeItem("isLoggedIn");
+
+            // Redirect after logging out
+            setTimeout(() => {
+                window.location.href = "registration_page_sign_in.html";
+            }, 300);
         });
+    } else {
+        console.error("Sign-out button not found in the DOM.");
     }
 
-    // Active page highlighting
+    // Active Page Highlighting
     let currentPath = window.location.pathname.split("/").pop() || "";
     let pages = {
         "homepage.html": "homeLink",
@@ -51,10 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (pages[currentPath]) {
-        document.getElementById(pages[currentPath]).classList.add("active");
+        const activeLink = document.getElementById(pages[currentPath]);
+        if (activeLink) {
+            activeLink.classList.add("active");
+        }
     }
 });
-
 
 
 

@@ -1,19 +1,19 @@
 
 //The sign in button will be replaced with profile button when the user is logged in
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = true; //false to test without login and true if logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = localStorage.getItem("username") || "TRAINER"; // Default username
+    console.log("User logged in:", isLoggedIn); // Debugging
 
     const signInButton = document.querySelector(".sign-in-btn");
-
-    if (isLoggedIn) {
+    if (signInButton && isLoggedIn) {
         const profileButton = document.createElement("button");
-        profileButton.classList.add("profile-btn");//Add the profile button class and will be used for CSS
-
-        profileButton.innerHTML = 
-            <a href = "profile_page.html" id  = "profileLink">
-                <i class = "fas fa-user"></i>
-            </a>;
-        
+        profileButton.classList.add("profile-btn");
+        profileButton.innerHTML = `
+            <a href="profile_page.html" id="profileLink">
+                <i class="fas fa-user"></i>
+            </a>
+        `;
         signInButton.replaceWith(profileButton);
     }
 });
