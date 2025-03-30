@@ -281,3 +281,111 @@ button:hover {
     font-size: 0.8em;
     color: #ffffff;
 }
+
+/* Responsive Design STARTS HERE*/
+
+/* FINAL - Tablet/iPad (width ≤ 900px) */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(0);
+        height: auto;
+        padding: 20px;
+    }
+
+    .background-image, .form-section {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .background-image {
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding-left: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logos {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+/* FINAL SPLIT SCREEN FOR DESKTOPS*/
+@media (min-width: 901px) and (max-width: 1200px){
+    .container {
+        max-width: 90%;
+        transform: translateX(-50px);
+    }
+    
+    .footer-logos {
+        padding-left: 100px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(0);
+        height: auto;
+        padding: 10px;
+    }
+
+    .background-image, .form-section {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .background-image {
+        border-radius: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    form input, button {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logos {
+        padding-left: 0;
+    }
+
+    .footer-social {
+        margin-right: 0;
+    }
+}
