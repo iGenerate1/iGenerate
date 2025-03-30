@@ -9,11 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const profileButton = document.createElement("button");
         profileButton.classList.add("profile-btn");//Add the profile button class and will be used for CSS
 
-        profileButton.innerHTML = `
+        profileButton.innerHTML = 
             <a href = "profile_page.html" id  = "profileLink">
                 <i class = "fas fa-user"></i>
-            </a>
-        `;
+            </a>;
         
         signInButton.replaceWith(profileButton);
     }
