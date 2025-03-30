@@ -57,8 +57,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     padding-bottom: 50px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    box-sizing: border-box; /* Include padding and border in width */
+    overflow-x: auto;
+    box-sizing: border-box;
 }
 
 .transaction-row,
@@ -67,20 +67,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    white-space: nowrap; /* Prevent wrapping */
-    box-sizing: border-box; /* Include padding and border in width */
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .transaction-column {
     flex: 1;
     text-align: left;
     padding: 5px;
-    min-width: 120px; /* Adjust as needed */
-    max-width: 25%; /* Limit column width to prevent overflow */
-    word-break: keep-all; /* Keep words intact */
-    box-sizing: border-box; /* Include padding and border in width */
-    overflow: hidden; /* Prevent text overflow */
-    text-overflow: ellipsis; /* Add ellipsis for long text */
+    min-width: 120px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow full item description to be visible */
+    white-space: normal; /* Allow item description to wrap if needed */
 }
 
 .transaction-header-row .transaction-column {
@@ -272,14 +270,8 @@ body {
         padding: 15px;
     }
 
-    /* Keep single row, enable scrolling */
-    .transaction-row,
-    .transaction-header-row {
-        white-space: nowrap;
-    }
-
     .transaction-column {
-        min-width: 100px; /* Adjust as needed */
+        min-width: 100px;
     }
 
     /* Footer */
@@ -341,14 +333,8 @@ body {
         padding: 10px;
     }
 
-    /* Keep single row, enable scrolling */
-    .transaction-row,
-    .transaction-header-row {
-        white-space: nowrap;
-    }
-
     .transaction-column {
-        min-width: 80px; /* Adjust as needed */
+        min-width: 80px;
     }
 
     /* Footer */
