@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartButton = document.createElement("button");
         cartButton.classList.add("cart-btn"); // Add the cart button class for CSS
         cartButton.innerHTML = `
-            <a href="cart.html" class="nav-link" title="Cart">
+            <a href="cart_page.html" class="nav-link" title="Cart">
                 <i class="fas fa-shopping-cart cart-icon"></i>
             </a>
         `;

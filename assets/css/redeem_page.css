@@ -1,0 +1,339 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #e5f3efd5;
+}
+
+.header-bar {
+    background-color: #76c6d6;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.sign-in-btn {
+    background-color: #50c8b0;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.redeem-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.redeem-container h2 {
+    font-weight: bold;
+    color: #41707d;
+}
+
+.redeem-container a {
+    font-weight: bold;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #41707d;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.info-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.redeem-btn {
+    background-color: #50c8b0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Overlay Background */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay Content */
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+}
+
+/* OK Button */
+#closeOverlay {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #50c8b0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#closeOverlay:hover {
+    background: #3ba390;
+}
+
+/* FOOTER */
+.footer {
+    background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
+    padding: 40px;
+    padding-top: 30px;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-content a:hover{
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    GAP: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 70%;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.footer-logos img {
+    height: 50px; 
+    width: auto; 
+}
+
+.footer-logos a img[alt="Niantic Logo"] {
+    width: 70px;
+    height: 80px;
+}
+
+.footer-logos img[alt="iGenerate Logo"] {
+    width: 90px;
+    height: 80px;
+}
+
+.footer-logos a img[alt="Pokémon Logo"] {
+    width: 100px;
+    height: 14px;
+}
+
+.footer-social {
+    justify-content: flex-end;
+    display: flex;
+    gap: 15px;
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.footer-social a {
+    display: flex; 
+    align-items: center; 
+    margin-left: 10px;
+}
+
+.footer-social a img {
+    width: 24px; 
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.footer-social img[alt="Facebook Logo"]{
+    height: 35px;
+    width: 35px;
+    padding-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-bottom-links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+    color: #ffffff;
+}
+
+.bluegreen-line {
+    height: 20px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
+}
+
+/* Responsive Design */
+/* Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sign-in-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .redeem-container {
+        width: 95%;
+    }
+
+    .overlay-content {
+        width: 90%;
+        min-width: unset;
+        padding: 15px;
+    }
+
+    #closeOverlay {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Footer */
+    .footer-content{
+        margin-right: 50px;
+        justify-content: space-between;
+    }
+
+    .footer-logos img{
+        margin-right: 50px;
+    }
+
+    .footer-social a img {
+        margin-right: 50px;
+    }
+
+    .footer-bottom-links {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+    .redeem-container {
+        width: 95%;
+    }
+    
+    /* Footer */
+    .footer-content {
+        padding-left: 90px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logos {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Small Desktops (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .redeem-container {
+        max-width: 700px;
+    }
+}
+
+/* Large Screens (above 1200px) */
+@media (min-width: 1201px) {
+    .redeem-container {
+        max-width: 800px;
+    }
+    
+}

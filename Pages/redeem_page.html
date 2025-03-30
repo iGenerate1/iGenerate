@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéWebstore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/redeem_page.css">
+    <link rel="stylesheet" href="/assets/css/header.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
+            <li><a href="store_page.html" id="storeLink" class="nav-link">Store</a></li>
+            <li><a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a></li>
+            <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink"
+                    class="nav-link">Event Ticketing</a></li>
+        </ul>
+        <button class="sign-in-btn"><a href="registration_page_sign_in.html" id = "signinLink">Sign In</a></button>
+    </nav>
+    <hr class="bluegreen-line">
+
+    <!-- MAIN CONTENT -->
+    <main class="redeem-container">
+        <a href="store_page.html" class="back-link">← Back to Store</a>
+        <h2>Code Redemption</h2>
+        <p class="info-text">
+            Sign in with your Pokémon GO account to redeem offer or gift card codes. To redeem an offer or gift card code, you must be logged in to your Pokémon GO account. To create a game account, please download the app. If you have any questions, please refer to the 
+            <a href="#">Code Redemption FAQ</a> or the 
+            <a href="#">Pokémon GO Gift Card FAQ</a>.
+        </p>
+        <button class="redeem-btn">Sign in to Redeem</button>
+    </main>
+
+    <!-- FOOTER -->
+    <hr class="bluegreen-line">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="https://pokemongolive.com/">Pokémon GO Live</a>
+                        <a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
+                        <a href="https://pokemongolive.com/events">Events</a>
+                        <a href="https://pokemongolive.com/news">News</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="https://store.pokemongolive.com/support">Support</a>
+                        <a href="https://store.pokemongolive.com/offer-redemption">Code Redemption</a>
+                        <a href="https://pokemongolive.com/community-day/map">Community Day Map</a>
+                    </div>
+                </div>
+                <div class="footer-logos">
+                    <a href = "https://nianticlabs.com/">
+                        <img src="/assets/images/niantic logo.png" alt="Niantic Logo">
+                    </a>
+                    <a href ="https://www.pokemon.com/us">
+                        <img src="/assets/images/pokemon company.webp" alt="Pokémon Logo">
+                    </a>
+                    <img src="/assets/images/igenerate.png" alt="iGenerate Logo">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.youtube.com/@pokemongo">
+                        <img src = "/assets/images/youtube.png" alt="YouTube Logo">
+                    </a>
+                    <a href="https://www.facebook.com/PokemonGO/">
+                        <img src ="/assets/images/fb.png" alt="Facebook Logo">
+                    </a>
+                    <a href="https://www.instagram.com/pokemongoapp/">
+                        <img src ="/assets/images/ig.png" alt="Instagram Logo">
+                    </a>
+                    <a href="https://www.tiktok.com/@pokemongo">
+                        <img src ="/assets/images/tiktok.png" alt="TikTok Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="https://nianticlabs.com/terms">Terms of Service</a>
+                    <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+                    <a href="https://nianticlabs.com/ip-policy">Copyright Policy</a>
+                    <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+                </div>
+                <p>&copy;2025 Niantic, Inc. &copy;Pokémon. &copy;1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no copyright infringement is intended.</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="redeem_page.js"></script>
+
+    <!-- Overlay for success message -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p>✅ Code successfully applied!</p>
+            <button id="closeOverlay">OK</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
