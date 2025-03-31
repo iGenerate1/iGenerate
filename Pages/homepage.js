@@ -41,16 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isLoggedIn) {
         // Change title
-        title.innerText = "Daily Bundles";
+        title.innerText = "Exclusive Bundles";
 
         // Clear existing content
         bundlesContainer.innerHTML = "";
 
         // Define new bundle items
         const newBundles = [
-            { name: "Boost Box", price: 99, img: "/assets/images/boost-box.png" },
-            { name: "Great Raid Box", price: 250, img: "/assets/images/great-raid-box.png" },
-            { name: "Voyager Box", price: 1120, img: "/assets/images/voyager-box.png" }
+            { name: "Boost Box", price: '<i class="fas fa-shopping-cart cart-icon"></i> Add to Cart', img: "/assets/images/boost-box.png" },
+            { name: "Great Raid Box", price: '<i class="fas fa-shopping-cart cart-icon"></i> Add to Cart', img: "/assets/images/great-raid-box.png" },
+            { name: "Voyager Box", price: '<i class="fas fa-shopping-cart cart-icon"></i> Add to Cart', img: "/assets/images/voyager-box.png" }
         ];
 
         // Loop through and create the new bundle elements
@@ -62,12 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${bundle.img}" alt="${bundle.name}">
                 <div class="content">
                     <h4>${bundle.name}</h4>
-                    <p>Exclusive Bundle</p>
+                    <p>Updates Every Midnight</p>
                     <button class="buy-button"> ${bundle.price}</button>
                 </div>
             `;
 
             bundlesContainer.appendChild(bundleDiv);
+        });
+
+        //Event listeners for add to cart
+        document.querySelectorAll(".buy-button").forEach(button => {
+            button.addEventListener("click", () => {
+                document.getElementById("customAlert").style.display = "flex";
+            });
+        });
+
+        //Close the custom alert
+        document.getElementById("closeAlert").addEventListener("click", () => {
+            document.getElementById("customAlert").style.display = "none";
         });
     }
 });
