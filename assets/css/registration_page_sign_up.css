@@ -1,13 +1,15 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Lato, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2, #d0f3e8);
+    background-image: url('/assets/images/trybg.png'); /* Background image */
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     box-sizing: border-box;
 }
-
+ 
 /* Social Icons */
 .social-icons img {
     width: 40px;
@@ -16,18 +18,19 @@ body {
     object-fit: contain;
     cursor: pointer;
 }
-
+ 
 .social-icons img:hover {
     opacity: 0.8;
 }
-
+ 
 /* Sign-In Section */
 .container {
-    justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    right: 35px;
     height: auto; /* Adjust height to fit content */
-    max-width: 200px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     background: transparent;
@@ -35,7 +38,7 @@ body {
     box-shadow: none;
     padding: 0;
 }
-
+ 
 /* Form Section */
 .form-section {
     width: 55%;
@@ -52,18 +55,18 @@ body {
     overflow: hidden;
     box-sizing: border-box;
 }
-
+ 
 .form-section h2 {
     margin-bottom: 15px;
 }
-
+ 
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+ 
 /* Input Fields */
 form input {
     width: 90%;
@@ -74,7 +77,7 @@ form input {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
+ 
 /* Button */
 button {
     width: 90%; /* Match input width */
@@ -88,11 +91,11 @@ button {
     box-sizing: border-box;
     transition: opacity 0.3s;
 }
-
+ 
 button:hover {
     opacity: 0.8;
 }
-
+ 
 /* Remember Me Section */
 .remember-section {
     display: flex;
@@ -105,7 +108,7 @@ button:hover {
     padding: 0 5px;
     box-sizing: border-box;
 }
-
+ 
 /* Remember Me Checkbox */
 .remember-section label {
     display: flex;
@@ -114,7 +117,7 @@ button:hover {
     cursor: pointer;
     margin-left: 0;
 }
-
+ 
 .remember-section input[type="checkbox"] {
     appearance: none;
     width: 16px;
@@ -127,23 +130,23 @@ button:hover {
     position: relative;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
+ 
 .remember-section input[type="checkbox"]:checked {
     background-color: #2a75bb;
     border-color: #2a75bb;
 }
-
+ 
 /* Forgot Password Link */
 .remember-section a {
     text-decoration: none;
     color: #333;
 }
-
+ 
 .remember-section a:hover {
     color: #2a75bb;
     text-decoration: underline;
 }
-
+ 
 /* Custom Pop-up */
 .popup {
     display: none;
@@ -157,7 +160,7 @@ button:hover {
     align-items: center;
     z-index: 9999;
 }
-
+ 
 .popup-content {
     background: white;
     padding: 20px;
@@ -165,7 +168,7 @@ button:hover {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+ 
 #close-popup {
     margin-top: 10px;
     padding: 8px 16px;
@@ -175,13 +178,13 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }
-
+ 
 #close-popup:hover {
     background-color: #0056b3;
 }
-
+ 
 /* Responsive Design STARTS HERE*/
-
+ 
 /* FINAL - Tablet/iPad (width ≤ 900px) */
 @media (max-width: 900px) {
     .container {
@@ -195,35 +198,35 @@ button:hover {
         border-radius: 0;
     }
 }
-
+ 
 /* Laptop (901px - 1200px) */
 @media (min-width: 901px) and (max-width: 1200px) {
     .container {
         max-width: 90%;
     }
 }
-
+ 
 /* Mobile (width ≤ 768px) */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
         flex-direction: column; /* Stack image and form vertically */
     }
-
+ 
     .background-img {
         width: 100%; /* Take full width */
         height: auto; /* Allow image to adjust height */
     }
-
+ 
     .form-section {
         width: 100%; /* Take full width */
         padding: 20px;
     }
-
+ 
     form input, button {
         width: 100%;
     }
-
+ 
     .other-content {
         /* Adjust styles for your other content */
         margin-bottom: 20px; /* Add space between content and form */
