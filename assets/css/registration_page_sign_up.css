@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2, #d0f3e8);
+    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -31,7 +32,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 83vh; /* Adjusted height of the background image */
+    height: 64vh; /* Adjusted height of the background image */
     background-size: cover;
     background-position: center center; /* Keep the image centered */
     border-radius: 20px;
