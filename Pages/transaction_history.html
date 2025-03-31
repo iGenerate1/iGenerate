@@ -16,18 +16,37 @@
 </head>
 
 <body>
-    <nav id="navbar">
-        <div class="logo">
-            <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo">
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
-            <li><a href="store_page.html" id="storeLink" class="nav-link">Store</a></li>
-            <li><a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a></li>
-            <li><a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink" class="nav-link">Event Ticketing</a></li>
-            <li><a href="transaction_history.html" id="homeLink" class="nav-link">Transaction</a></li>
-        </ul>
-    </nav>
+   <!-- HEADER -->
+   <nav id="navbar">
+    <div class="logo">
+      <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo" />
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
+      <li>
+        <a href="store_page.html" id="storeLink" class="nav-link">Store</a>
+      </li>
+      <li>
+        <a href="redeem_page.html" id="redeemLink" class="nav-link"
+          >Code Redemption</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo"
+          id="eventLink"
+          class="nav-link"
+          >Event Ticketing</a
+        >
+      </li>
+      <li><a href="transaction_history.html" id="transactionLink" class="nav-link">Transaction</a></li>
+    </ul>
+    <div class="user-buttons">
+      <button class="sign-in-btn">
+        <a href="registration_page_sign_in.html" id="signinLink">Sign In</a>
+      </button>
+    </div>
+  </nav>
     <div class="transaction-header-container">
         <div class="transaction-header">
             <h1>Transaction History</h1>
@@ -145,7 +164,7 @@
             <p>©2025 Niantic, Inc. ©Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no copyright infringement is intended.</p>
         </div>
     </footer>
-    <script src="/assets/js/homepage.js"></script>
+    <script src="/Pages/transaction_history.js"></script>
 </body>
 
 </html>

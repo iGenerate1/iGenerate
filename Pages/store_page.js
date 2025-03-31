@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "homepage.html": "homeLink",
         "store_page.html": "storeLink",
         "redeem_page.html": "redeemLink",
-        "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
+        "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink",
+        "transaction_history.html": "transactionLink",
+        "cart_page.html": "cartLink",
     };
 
     // Set active class for the matching link
@@ -51,12 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    let carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
-        interval: 3000,  // Auto-slide every 3 seconds
-        wrap: true
-    });
-});
 
 function setActiveTab(clickedTab) {
     // Remove 'active' from all tabs
