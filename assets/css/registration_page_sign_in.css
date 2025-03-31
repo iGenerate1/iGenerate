@@ -7,13 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Blue-Green Line */
-.bluegreen-line {
-    height: 20px;
-    background-color: #39c29c;
-    margin: 0;
-    opacity: 100%;
-}
 
 /* Social Icons */
 .social-icons img {
