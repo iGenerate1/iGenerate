@@ -307,11 +307,12 @@ h3 {
     font-size: 1em;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     gap: 5px;
     margin: auto;
     width: fit-content;
+    
 }
 
 .cart-icon {
