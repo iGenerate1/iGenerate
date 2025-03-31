@@ -210,58 +210,46 @@ button:hover {
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
-        justify-content: center;
-        transform: translateX(0);
-        height: auto;
         padding: 20px;
     }
-
     .background-img, .form-section {
         width: 100%;
-        position: static;
-        height: auto;
     }
-
     .background-img {
         border-radius: 0;
-        margin-bottom: 20px;
     }
 }
 
-/* FINAL SPLIT SCREEN FOR DESKTOPS */
+/* Laptop (901px - 1200px) */
 @media (min-width: 901px) and (max-width: 1200px) {
     .container {
         max-width: 90%;
-        transform: translateX(-50px);
     }
 }
 
-/* MOBILE */
+/* Mobile (width ≤ 768px) */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
-        justify-content: center;
-        transform: translateX(0);
-        height: auto;
         padding: 10px;
-    }
-
-    .background-img, .form-section {
-        width: 100%;
-        position: static;
-        height: auto;
+        flex-direction: column; /* Stack image and form vertically */
     }
 
     .background-img {
-        border-radius: 0;
-        margin-bottom: 10px;
+        width: 100%; /* Take full width */
+        height: auto; /* Allow image to adjust height */
     }
 
     .form-section {
+        width: 100%; /* Take full width */
         padding: 20px;
     }
 
     form input, button {
         width: 100%;
+    }
+
+    .other-content {
+        /* Adjust styles for your other content */
+        margin-bottom: 20px; /* Add space between content and form */
     }
 }
