@@ -1,19 +1,17 @@
 body {
     font-family: 'Lato', sans-serif;
-    margin: 0px;
+    margin: 0;
     padding: 0;
     background-color: #e5f3efd5;
 }
 
-
-
-/* hero section */
+/* Hero Section */
 .hero-section {
     background-image: url(/assets/images/store-featured.png);
     height: 40vh;
     position: relative;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
     overflow: hidden;
     z-index: -1;
 }
@@ -36,21 +34,21 @@ body {
 }
 
 .hero-text h1 {
-    margin-top: 0px;
-    font-size: 5.5rem;
+    margin-top: 0;
+    font-size: 4rem;
     font-weight: bold;
     z-index: 1;
 }
 
 .hero-caption p {
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 10px;
     z-index: 1;
 }
 
 .pokemon-container {
     display: flex;
-    gap: 80px;
+    gap: 60px;
     width: auto;
     height: 60%;
     position: absolute;
@@ -71,8 +69,8 @@ body {
 }
 
 .pokemon {
-    margin: 0 60px;
-    width: 120px;
+    margin: 0 40px;
+    width: 100px;
     animation: float 5s infinite alternate ease-in-out;
     z-index: -1;
 }
@@ -120,11 +118,11 @@ h3 {
     background-image: linear-gradient(to right, #065380, #5ea4bb);
     color: white;
     margin: 10px auto 60px;
-    width: 150%;
-    height: 210px;
+    width: 100%;
     max-width: 900px;
-    padding: 60px 70px 50px;
+    padding: 30px 40px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border-radius: 15px;
@@ -137,8 +135,8 @@ h3 {
 }
 
 .featured-image img {
-    width: 150px;
-    height: 160px;
+    width: 100px;
+    height: 110px;
     left: 30%;
 }
 
@@ -155,17 +153,20 @@ h3 {
 .store-tabs {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
 }
 
 .tab-btn {
     background: none;
     border: none;
     color: #007cc5;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     font-weight: bold;
     position: relative;
@@ -181,7 +182,7 @@ h3 {
 .tab-btn::before {
     content: "⚡";
     color: #feca04;
-    font-size: 18px;
+    font-size: 14px;
     margin-right: 5px;
     visibility: hidden;
 }
@@ -216,7 +217,7 @@ h3 {
 }
 
 .bundle-card img {
-    width: autoh;
+    width: auto;
     height: 12vh;
     margin-bottom: 10px;
 }
@@ -231,7 +232,7 @@ h3 {
 .bundle-info .description {
     font-size: 0.85em;
     color: #555;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0;
 }
 
@@ -302,8 +303,46 @@ h3 {
     background-color: #005f8a;
 }
 
+/* Responsive Design */
 
-/* Responsiveness For All Devices and For All Elements */
+/* Tablet/iPad (width ≤ 900px) */
+@media (max-width: 900px) {
+    .hero-section {
+        height: 35vh;
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-caption p {
+        font-size: 28px;
+    }
+
+    .pokemon-container {
+        gap: 50px;
+    }
+
+    .pokemon {
+        width: 90px;
+    }
+
+    .featured {
+        padding: 25px 30px;
+    }
+
+    .featured-image img {
+        width: 90px;
+        height: 100px;
+    }
+
+    .bundle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (width ≤ 768px) */
 @media (max-width: 768px) {
     .hero-section {
         height: 30vh;
@@ -315,37 +354,55 @@ h3 {
     }
 
     .hero-caption p {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .pokemon-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        gap: 40px;
     }
 
     .pokemon {
-        width: 80px;
+        width: 70px;
     }
 
     .featured {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-        width: 90%;
+        padding: 20px 20px;
     }
 
     .featured-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .store-tabs {
-        flex-direction: column;
-        gap: 10px;
+        width: 80px;
+        height: 90px;
     }
 
     .bundle-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra Small Devices (width ≤ 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 25vh;
+        padding: 40px 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-caption p {
+        font-size: 20px;
+    }
+
+    .pokemon {
+        width: 60px;
+    }
+
+    .featured {
+        padding: 15px 15px;
+    }
+
+    .bundle-grid {
+        grid-template-columns: 1fr;
     }
 }
