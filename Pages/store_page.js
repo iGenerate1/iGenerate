@@ -3,32 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const username = localStorage.getItem("username") || "TRAINER"; // Default username
     console.log("User logged in:", isLoggedIn); // Debugging
 
+    const userButtonsContainer = document.querySelector(".user-buttons"); 
     const signInButton = document.querySelector(".sign-in-btn");
-    if (signInButton && isLoggedIn) {
+
+    if (isLoggedIn && userButtonsContainer) {
+        // Create profile button
         const profileButton = document.createElement("button");
         profileButton.classList.add("profile-btn");
-        profileButton.innerHTML = `
-            <i class="fas fa-user"></i>
-        `;
+        profileButton.innerHTML = `<i class="fas fa-user"></i>`;
 
-        // Append event listener to navigate to profile page
         profileButton.addEventListener("click", () => {
-            window.location.href = "profile_page.html"; // Change this to your actual profile page URL
+            window.location.href = "profile_page.html"; 
         });
 
-        signInButton.replaceWith(profileButton);
-
-        // Create the cart button
+        //Create cart button
         const cartButton = document.createElement("button");
-        cartButton.classList.add("cart-btn"); // Add the cart button class for CSS
+        cartButton.classList.add("cart-btn");
         cartButton.innerHTML = `
             <a href="cart_page.html" class="nav-link" title="Cart">
                 <i class="fas fa-shopping-cart cart-icon"></i>
             </a>
         `;
 
-        // Insert the cart button before the profile button
-        userButtonsContainer.insertBefore(cartButton, profileButton);
+        //Clear the user-buttons container and add new buttons
+        userButtonsContainer.innerHTML = ""; 
+        userButtonsContainer.appendChild(cartButton);
+        userButtonsContainer.appendChild(profileButton);
     }
 });
 
