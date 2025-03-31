@@ -53,7 +53,7 @@ body {
     width: 90%;
     max-width: 800px;
     margin: 30px auto;
-    background: #e6f3ef;
+    background-image: linear-gradient(to right, #065380, #5ea4bb);
     padding: 20px;
     border-radius: 10px;
     padding-bottom: 50px;
@@ -82,17 +82,24 @@ body {
 }
 
 .transaction-header-row .transaction-column {
-    padding-left: 20px;
+    padding-left: 25px;
+}
+
+.transaction-column:nth-child(2){
+    padding-left: 25px;
+}
+
+.transaction-column:nth-child(4){
+    padding-right: 10px;
 }
 
 .transaction-history-content {
-    background-color: #e6f3ef;
     border-radius: 10px;
     padding: 15px;
 }
 
 .transaction-row-container {
-    background-color: #fff;
+    background-image: linear-gradient(to right, #daebe9, #d4f4e8, #d0f3e8 );
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -106,146 +113,23 @@ body {
 }
 
 .status.completed {
-    color: green;
-    background-color: #d4edda;
+    color: white;
+    background-color: #39c29c;
 }
 
 .status.redeemed {
-    color: blue;
-    background-color: #cce5ff;
+    color: white;
+    background-color: #007cc5;
 }
 
 .status.pending {
-    color: orange;
-    background-color: #fff3cd;
+    color: white;
+    background-color: #feca04;
 }
 
 .status.refunded {
-    color: red;
-    background-color: #f8d7da;
-}
-
-/* FOOTER - Same as before */
-.footer {
-    background-image: linear-gradient(to right, #528e88, #41707d, #5396a8);
-    padding: 40px;
-    padding-top: 30px;
-    color: #ffffff;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-.footer-links {
-    display: flex;
-    GAP: 40px;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-}
-
-.footer-column a {
-    text-decoration: none;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.footer-logos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    width: 70%;
-    padding-bottom: 10px;
-    margin-left: 10px;
-}
-
-.footer-logos img {
-    height: 50px;
-    width: auto;
-}
-
-.footer-logos a img[alt="Niantic Logo"] {
-    width: 70px;
-    height: 80px;
-}
-
-.footer-logos img[alt="iGenerate Logo"] {
-    width: 90px;
-    height: 80px;
-}
-
-.footer-logos a img[alt="Pokémon Logo"] {
-    width: 100px;
-    height: 14px;
-}
-
-.footer-social {
-    justify-content: flex-end;
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.footer-social a img {
-    width: 24px;
-    height: auto;
-    padding-bottom: 10px;
-}
-
-.footer-social img[alt="Facebook Logo"] {
-    height: 35px;
-    width: 35px;
-    padding-right: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.footer-bottom-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-bottom-links a {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom-links a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom p {
-    font-size: 0.8em;
-    color: #ffffff;
+    color: white;
+    background-color: #dc2424;
 }
 
 /* Responsive Design STARTS HERE*/

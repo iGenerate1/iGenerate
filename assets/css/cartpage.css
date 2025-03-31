@@ -5,99 +5,6 @@ body {
     background-color: #e5f3efd5;
 }
 
-/* Navbar Styling */
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures space between logo, nav-links, and button */
-    background-color: white;
-    padding: 10px 40px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centers the links */
-    flex-grow: 1; /* Allows it to take available space */
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 15px; /* Adds spacing between links */
-    font-size: 18px;
-}
-
-.nav-link .cart-icon {
-    font-size: 20px;
-    color: #007cc5;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links .cart-icon:hover {
-    color: #feca04; /* Change color on hover */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #007cc5;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
-    align-items: center;
-}
-
-#nav-links a:hover {
-    color: #feca04;
-}
-
-.nav-links a.active {
-    color: #feca04; /* Yellow for active link */
-}
-
-.sign-in-btn {
-    background-color: #feca04;
-    color: white;
-    border: none;
-    padding: 8px 45px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.sign-in-btn:hover {
-    background-color: #007cc5;
-}
-
-.sign-in-btn a {
-    color: white;
-    text-decoration: none;
-}
-
-.profile-btn {
-    background-color: #007cc5; /* Change to your theme color */
-    color: white;
-    border: none;
-    padding: 8px 40px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.profile-btn a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.profile-btn:hover {
-    background-color:#feca04; 
-}
-
-.profile-btn i {
-    font-size: 18px;
-}
 .bluegreen-line {
     height: 20px;
     background-color: #39c29c;
@@ -109,11 +16,11 @@ body {
     width: 90%;
     max-width: 600px;
     margin: auto;
-    background: #e6f3ef;
+    background-image: linear-gradient(to right, #065380, #5ea4bb);
     padding: 20px;
     border-radius: 10px;
     margin-top: 30px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .cart-header {
@@ -126,7 +33,7 @@ body {
 }
 
 .cart-header h1 {
-    font-size: 22px;
+    font-size: 42px;
 }
 
 .balance {
@@ -141,7 +48,7 @@ body {
 .back-link {
     display: inline-block;
     margin: 15px 0;
-    color: #007cc5;
+    color: #ffffff;
     text-decoration: none;
     font-size: 14px;
 }
@@ -152,12 +59,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #007cc5;
+    color: #ffffff;
 }
 
 .item-count {
     font-size: 14px;
-    color: #007cc5;
+    color: #ffffff;
 }
 
 .cart-item {
@@ -193,19 +100,26 @@ body {
     color: #007cc5;
 }
 
+.item-price img {
+    height: 1.5vw;
+}
+
 .quantity {
     font-size: 12px;
     color: #007cc5;
 }
 
 .price {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     color: #007cc5;
 }
 
 .total-price{
-    color: #007cc5;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: right;
 }
 
 .checkout-btn {
@@ -224,126 +138,3 @@ body {
     background: #ffce26;
 }
 
-
-/* FOOTER */
-.footer {
-    background-image: linear-gradient(to right, #528e88 , #41707d, #5396a8);
-    padding: 40px;
-    padding-top: 30px;
-    color: #ffffff;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-content a:hover{
-    text-decoration: underline;
-}
-
-.footer-links {
-    display: flex;
-    GAP: 40px;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-}
-
-.footer-column a {
-    text-decoration: none;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.footer-logos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    width: 70%;
-    padding-bottom: 10px;
-    margin-left: 10px;
-}
-
-.footer-logos img {
-    height: 50px; 
-    width: auto; 
-}
-
-.footer-logos a img[alt="Niantic Logo"] {
-    width: 70px;
-    height: 80px;
-}
-
-.footer-logos img[alt="iGenerate Logo"] {
-    width: 90px;
-    height: 80px;
-}
-
-.footer-logos a img[alt="Pokémon Logo"] {
-    width: 100px;
-    height: 14px;
-}
-
-.footer-social {
-    justify-content: flex-end;
-    display: flex;
-    gap: 15px;
-    width: 100%; 
-    margin-top: 10px; 
-}
-
-.footer-social a {
-    display: flex; 
-    align-items: center; 
-    margin-left: 10px;
-}
-
-.footer-social a img {
-    width: 24px; 
-    height: auto;
-    padding-bottom: 10px;
-}
-
-.footer-social img[alt="Facebook Logo"]{
-    height: 35px;
-    width: 35px;
-    padding-right: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.footer-bottom-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-bottom-links a {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom-links a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom p {
-    font-size: 0.8em;
-    color: #ffffff;
-}
