@@ -3,10 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2,  #d0f3e8 );
+    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2, #d0f3e8);
     box-sizing: border-box;
 }
-
 
 /* Social Icons */
 .social-icons img {
@@ -21,7 +20,6 @@ body {
     opacity: 0.8;
 }
 
-
 /* Background Image */
 .background-img {
     display: block;
@@ -30,14 +28,16 @@ body {
     justify-content: center;
     top: 0;
     z-index: -1; /* Ensure the background image is behind the form */
-    left: 90px;
-    width: 80%;
-    max-width: 990xx;
-    height: 62vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 83vh; /* Adjusted height of the background image */
     background-size: cover;
+    background-position: center center; /* Keep the image centered */
     border-radius: 20px;
     overflow: hidden;
-    position: relative; /* Ensure proper positioning */
+    position: relative;
+    object-fit: cover; /* Prevent stretching */
 }
 
 /* Sign-In Section */
@@ -47,7 +47,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     right: 35px;
-    height: 110vh;
+    height: auto; /* Adjust height to fit content */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -56,12 +56,14 @@ body {
     box-shadow: none;
     padding: 0;
     transform: translateX(-125px);
+    margin-top: 10vh; /* Adjusted margin-top to move form further down */
 }
 
 /* Form Section */
 .form-section {
     width: 55%;
-    height: 56.5%;
+    min-width: 300px; /* Ensure the form is not too narrow on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
     background-color: white;
     padding: 30px;
     text-align: center;
@@ -201,125 +203,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-
-/* FOOTER */
-.footer {
-    background-image: linear-gradient(to right, #528e88, #41707d, #5396a8);
-    padding: 20px;
-    color: #ffffff;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-.footer-links {
-    display: flex;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-}
-
-.footer-column a {
-    text-decoration: none;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.footer-logos {
-    display: flex;
-    justify-content: center; /* Centers logos horizontally */
-    align-items: center; /* Aligns logos vertically */
-    gap: 40px; /* Ensures even spacing between logos */
-    margin-top: 20px; /* Adjust margin as needed */
-    padding-left: 430px;
-}
-
-.footer-logos img {
-    height: 50px;
-    width: auto;
-}
-
-.footer-logos a img[alt="Niantic Logo"] {
-    width: 70px;
-    height: 80px;
-}
-
-.footer-logos img[alt="iGenerate Logo"] {
-    width: 90px;
-    height: 80px;
-}
-
-.footer-logos a img[alt="Pokémon Logo"] {
-    width: 100px;
-    height: 14px;
-}
-
-.footer-social {
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: 35px;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.footer-social a img {
-    width: 24px;
-    height: auto;
-    padding-bottom: 10px;
-}
-
-.footer-social img[alt="Facebook Logo"] {
-    height: 35px;
-    width: 35px;
-    padding-right: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.footer-bottom-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-bottom-links a {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom-links a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom p {
-    font-size: 0.8em;
-    color: #ffffff;
-}
-
 /* Responsive Design STARTS HERE*/
 
 /* FINAL - Tablet/iPad (width ≤ 900px) */
@@ -332,50 +215,23 @@ button:hover {
         padding: 20px;
     }
 
-    .background-image, .form-section {
+    .background-img, .form-section {
         width: 100%;
         position: static;
         height: auto;
     }
 
-    .background-image {
+    .background-img {
         border-radius: 0;
         margin-bottom: 20px;
     }
-
-    /* Footer */
-    .footer-content {
-        padding-left: 15px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logos {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .footer-social {
-        justify-content: center;
-        margin-right: 0;
-    }
 }
 
-/* FINAL SPLIT SCREEN FOR DESKTOPS*/
-@media (min-width: 901px) and (max-width: 1200px){
+/* FINAL SPLIT SCREEN FOR DESKTOPS */
+@media (min-width: 901px) and (max-width: 1200px) {
     .container {
         max-width: 90%;
         transform: translateX(-50px);
-    }
-    
-    .footer-logos {
-        padding-left: 100px;
     }
 }
 
@@ -389,13 +245,13 @@ button:hover {
         padding: 10px;
     }
 
-    .background-image, .form-section {
+    .background-img, .form-section {
         width: 100%;
         position: static;
         height: auto;
     }
 
-    .background-image {
+    .background-img {
         border-radius: 0;
         margin-bottom: 10px;
     }
@@ -406,24 +262,5 @@ button:hover {
 
     form input, button {
         width: 100%;
-    }
-
-    /* Footer */
-    .footer-content{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logos {
-        padding-left: 0;
-    }
-
-    .footer-social {
-        margin-right: 0;
     }
 }
