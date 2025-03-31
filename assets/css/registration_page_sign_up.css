@@ -3,67 +3,91 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2, #d0f3e8);
+    box-sizing: border-box;
 }
 
-/* Blue-Green Line */
-.bluegreen-line {
-    height: 20px;
-    background-color: #39c29c;
-    margin: 0;
-    opacity: 100%;
+/* Social Icons */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
 }
 
 /* Background Image */
-
-.background-img{
+.background-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     top: 0;
-    z-index: -100;
-    left: -70px;
-    width: auto;
-    height: 68.5vh;
+    z-index: -1; /* Ensure the background image is behind the form */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 83vh; /* Adjusted height of the background image */
     background-size: cover;
+    background-position: center center; /* Keep the image centered */
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    object-fit: cover; /* Prevent stretching */
 }
 
-/* Sign-Up Section */
+/* Sign-In Section */
 .container {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    height: 100vh;
+    right: 35px;
+    height: auto; /* Adjust height to fit content */
     max-width: 900px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     background: transparent;
     overflow: hidden;
+    box-shadow: none;
+    padding: 0;
+    transform: translateX(-125px);
+    margin-top: 10vh; /* Adjusted margin-top to move form further down */
 }
 
+/* Form Section */
 .form-section {
-    flex: 1; /* Keep flex:1, but the image fix will override */
-    width: 40%;
-    height: auto;
-    max-height: 80vh;
+    width: 55%;
+    min-width: 300px; /* Ensure the form is not too narrow on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
     background-color: white;
     padding: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .form-section h2 {
     margin-bottom: 15px;
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields */
 form input {
     width: 90%;
     max-width: 100%;
@@ -74,9 +98,10 @@ form input {
     box-sizing: border-box;
 }
 
+/* Button */
 button {
-    width: 90%;
-    max-width: 100%;
+    width: 90%; /* Match input width */
+    max-width: 100%; /* Match input max-width */
     padding: 10px;
     background-color: #2a75bb;
     color: white;
@@ -91,133 +116,55 @@ button:hover {
     opacity: 0.8;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 5px;
-    cursor: pointer; /* Added cursor pointer */
-    transition: opacity 0.3s; /* Added transition */
-}
-
-.social-icons img:hover {
-    opacity: 0.8; /* Added hover opacity */
-}
-
-/* FOOTER */
-.footer {
-    background-image: linear-gradient(to right, #528e88, #41707d, #5396a8);
-    padding: 20px;
-    color: #ffffff;
-}
-
-.footer-content {
+/* Remember Me Section */
+.remember-section {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    width: 90%;
+    max-width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
 }
 
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-.footer-links {
+/* Remember Me Checkbox */
+.remember-section label {
     display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 0;
 }
 
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
+.remember-section input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.footer-column a {
+.remember-section input[type="checkbox"]:checked {
+    background-color: #2a75bb;
+    border-color: #2a75bb;
+}
+
+/* Forgot Password Link */
+.remember-section a {
     text-decoration: none;
-    color: #ffffff;
-    margin-bottom: 10px;
+    color: #333;
 }
 
-.footer-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 20px;
-    padding-left: 430px;
-}
-
-.footer-logos img {
-    height: 50px;
-    width: auto;
-}
-
-.footer-logos a img[alt="Niantic Logo"] {
-    width: 70px;
-    height: 80px;
-}
-
-.footer-logos img[alt="iGenerate Logo"] {
-    width: 90px;
-    height: 80px;
-}
-
-.footer-logos a img[alt="Pokémon Logo"] {
-    width: 100px;
-    height: 14px;
-}
-
-.footer-social {
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: 35px;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.footer-social a img {
-    width: 24px;
-    height: auto;
-    padding-bottom: 10px;
-}
-
-.footer-social img[alt="Facebook Logo"] {
-    height: 35px;
-    width: 35px;
-    padding-right: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.footer-bottom-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-bottom-links a {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom-links a:hover {
+.remember-section a:hover {
+    color: #2a75bb;
     text-decoration: underline;
-    color: #ffffff;
-    margin: 0 10px;
-}
-
-.footer-bottom p {
-    font-size: 0.8em;
-    color: #ffffff;
 }
 
 /* Custom Pop-up */
@@ -242,7 +189,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#signup-close-popup {
+#close-popup {
     margin-top: 10px;
     padding: 8px 16px;
     background-color: #007BFF;
@@ -252,10 +199,9 @@ button:hover {
     cursor: pointer;
 }
 
-#signup-close-popup:hover {
+#close-popup:hover {
     background-color: #0056b3;
 }
-
 
 /* Responsive Design STARTS HERE*/
 
@@ -263,59 +209,29 @@ button:hover {
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
+        justify-content: center;
+        transform: translateX(0);
         height: auto;
         padding: 20px;
     }
 
-    .image-section, .form-section {
+    .background-img, .form-section {
         width: 100%;
-        max-height: none;
-    }
-
-    .form-section {
-        border-radius: 10px;
-    }
-
-    .image-section {
+        position: static;
         height: auto;
     }
 
-    /* Footer */
-    .footer-content {
-        padding-left: 15px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logos {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .footer-social {
-        justify-content: center;
-        margin-right: 0;
+    .background-img {
+        border-radius: 0;
+        margin-bottom: 20px;
     }
 }
 
-/* FINAL SPLIT SCREEN FOR DESKTOPS*/
-@media (min-width: 901px) and (max-width: 1200px){
+/* FINAL SPLIT SCREEN FOR DESKTOPS */
+@media (min-width: 901px) and (max-width: 1200px) {
     .container {
         max-width: 90%;
-    }
-
-    .image-section, .form-section {
-        width: 45%;
-    }
-    
-    .footer-logos {
-        padding-left: 100px;
+        transform: translateX(-50px);
     }
 }
 
@@ -323,44 +239,28 @@ button:hover {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        justify-content: center;
+        transform: translateX(0);
         height: auto;
         padding: 10px;
     }
 
-    .image-section, .form-section {
+    .background-img, .form-section {
         width: 100%;
-        max-height: none;
+        position: static;
+        height: auto;
+    }
+
+    .background-img {
+        border-radius: 0;
+        margin-bottom: 10px;
     }
 
     .form-section {
         padding: 20px;
-        border-radius: 5px;
-    }
-
-    .image-section {
-        height: auto;
     }
 
     form input, button {
         width: 100%;
-    }
-
-    /* Footer */
-    .footer-content{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logos {
-        padding-left: 0;
-    }
-
-    .footer-social {
-        margin-right: 0;
     }
 }
