@@ -207,3 +207,56 @@
         gap: 4px;
     }
 }
+
+/* iPhone 14 Pro and Similar Devices (width ≤ 390px) */
+@media (max-width: 390px) {
+    #navbar {
+        padding: 0px 6px;
+    }
+
+    .nav-links li {
+        font-size: 10px;
+        margin: 0 3px;
+        padding-top: 8px;
+    }
+
+    .nav-link .cart-icon, .cart-btn {
+        font-size: 10px;
+    }
+
+    .sign-in-btn, .profile-btn {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+
+    .user-buttons {
+        gap: 3px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a{
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .sign-in-btn{
+        font-size: 10px;
+        padding: 5px 20px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    .profile-btn{
+        font-size: 10px;
+        padding: 5px 20px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
