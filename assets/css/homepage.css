@@ -5,8 +5,6 @@ body {
     background-color: #e5f3efd5;
 }
 
-
-
 /* Hero Section Styling */
 .carousel-item {
     opacity: 0.8;
@@ -34,11 +32,13 @@ body {
     margin-top: 2vw; 
     font-size: 6vw;
     font-weight: bold;
+    z-index: 1000;
 }
 
 .carousel-caption p {
     font-size: 2.5vw;
-    margin-top: 1vw; /* Use vw units for responsiveness */
+    margin-top: 1vw; 
+    z-index: 1000;
 }
 
 .bluegreen-line {
@@ -227,7 +227,7 @@ h3{
 
 /* SIGN IN BUTTON */
 .view-button {
-    margin-left: 45px;
+    margin-left: 15px;
     background-color: #39c29c; 
     color: white;
     padding: 10px 40px;
@@ -266,10 +266,10 @@ h3{
 .bundle-card {
     background-image: url("/assets/images/real-pokemon.png");
     background-size: cover;
-    background-position: 56% 9%;
+    background-position: 50% 9%;
     background-size: 150px;
     background-repeat: no-repeat;
-    width: 40vw;
+    width: 50vw;
     height: 320px;
     background-color: #d9eee9;
     border-radius: 10px;
@@ -280,7 +280,7 @@ h3{
 }
 
 .bundle-card img {
-    margin-left: 55px;
+    margin-left: 15px;
     width: 150px;
     height: auto;
     border-radius: 10px;
@@ -298,23 +298,18 @@ h3{
     color: #007cc5;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-left: 55px;
+    margin-left: 15px;
 }
 
 .bundle-card p {
     font-size: 0.9em;
     color: #333;
     margin-bottom: 10px;
-    margin-left: 55px;
+    margin-left: 15px;
 }
 
 .buy-button {
-    margin-left: 55px;
-    background-image: url("/assets/images/Pokecoins.png");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 10px 55%;
-    background-position-x: 35px;
+    margin-left: 15px;
     background-color: #39c29c; 
     color: white;
     padding: 10px 60px;
@@ -331,6 +326,56 @@ h3{
     transform: scale(1.05);
 }
 
+/* Custom Alert Styles */
+#customAlert {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.alert-box {
+    background: #ffffff; 
+    color: #333;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1002;
+    position: relative;
+}
+
+.alert-box h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #fed118; 
+}
+
+.alert-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.alert-box button {
+    background: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1003;
+}
+
+.alert-box button:hover {
+    background: #0056b3;
+}
 
 /* DOWNLOAD BANNER */
 .download {
@@ -676,7 +721,7 @@ h3{
 
     /* Featured items */
     h3{
-        margin-right: 50px; /* right margin */
+        margin-right: 20px; /* right margin */
     }
 
     .featured {
@@ -696,6 +741,9 @@ h3{
         height: 300px;
         padding: 9px;
         padding-bottom: 60px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     .download-banner {
@@ -704,37 +752,37 @@ h3{
     }
 
     .download-logo{
-        padding-left: 30px;
-        width: 150px;
-        margin-left: 20px;
-        transform: translateX(14px);
+        padding-left: 20px;
+        width: 240px;
+        margin-right: 30px;
     }
 
     .download-text h2 {
-        margin-right: 900px;
-        font-size: 30px; /* Font size relative to viewport width */
-        transform: translateX(1px);
-       
+        text-align: center;
+        font-size: 35px;
+        margin-top: -20px; 
+        padding: 0; 
+        max-width: 100%; 
+        word-wrap: break-word; 
     }
 
     .app-stores {
         justify-content: center;
         width: 10px;
         height: 10px;
-        padding-right: 800px;
-        gap: 1px;
-        transform: translateX(-34px);
+        gap: 10px
     }
 
     .app-stores button img{
         margin-top: 20px;
-        margin-left: 10px;
-        gap: 1px;
+        justify-content: center;
+        align-items: center;
     }
 }
 
+
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
     #navbar {
         flex-direction: column;
         align-items: center;
@@ -781,11 +829,11 @@ h3{
     }
 
     .carousel-caption h1 {
-        font-size: 8vw; 
+        font-size: 4.5vw; 
     }
 
     .carousel-caption p {
-        font-size: 3.5vw; 
+        font-size: 3vw; 
     }
 
     #pokeButtonContainer {
@@ -823,7 +871,7 @@ h3{
 
     /* Featured */
     h3{
-        margin-left: 60px;
+        margin-left: 90px;
         font-size: 1.2em;
     }
 
@@ -860,7 +908,7 @@ h3{
     }
 
     .bundles h2 {
-        margin-left: -10px;
+        margin-left: 1px;
         font-size: 1.2em;
     }
 
@@ -954,7 +1002,7 @@ h3{
     }
 
     .download-logo {
-        width: 100px; 
+        width: 150px; 
         margin-top: 5px;
         margin-bottom: 15px;
     }
@@ -972,7 +1020,7 @@ h3{
         width: 100px; 
         height: 30px;
         margin-left: 160px; 
-        margin-top: -60px;
+        margin-top: -90px;
     }
 
     /*Google Play Store Button*/
@@ -980,7 +1028,7 @@ h3{
         width: 100px; 
         height: 30px; 
         margin-left: 160px;
-        margin-bottom: -50px; 
+        margin-bottom: -30px; 
     }
 
     /*Apple App Store Button*/
@@ -988,7 +1036,7 @@ h3{
         width: 100px; 
         height: 30px; 
         margin-left: 160px;
-        margin-top: -20px;
+        margin-top: -80px;
     }
 
     /* Footer */
