@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2,  #d0f3e8 );
     box-sizing: border-box;
 }
 
@@ -29,14 +29,19 @@ body {
 }
 
 /* Background Image */
-.background-image {
-    position: absolute;
+
+.background-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
     top: 0;
-    left: -10px;
-    width: 60%;
-    height: 100vh;
+    z-index: -100;
+    left: -70px;
+    width: 100%;
+    height: 60vh;
     background-size: cover;
-    border-radius: 50px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
