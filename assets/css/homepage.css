@@ -171,7 +171,7 @@ h3{
     left: 30%;
 }
 
-.price {
+.featured-price {
     font-size: 1.2em;
     font-weight: bold;
     background-color: #39c29c;
@@ -179,6 +179,7 @@ h3{
     border-radius: 5px;
     display: inline-block;
     margin-top: 5px;
+    color: white;
 }
 
 /* SPECIAL BUNDLES */
