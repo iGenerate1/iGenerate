@@ -201,6 +201,9 @@ body {
 @media (max-width: 768px) {
     .transaction-header-container {
         padding: 60px 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .transaction-header h1 {
@@ -215,28 +218,40 @@ body {
         width: 98%;
         margin: 15px auto;
         padding: 10px;
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+
+    .transaction-row,
+    .transaction-header-row {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .transaction-column {
-        min-width: 80px;
+        min-width: auto;
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: visible; /* Allow content to be fully visible */
+        white-space: normal; /* Allow text to wrap */
+        word-break: break-all;
+        font-size: 10px; /* Reduced font size for transactions */
     }
 
-    /* Footer */
-    .footer-content{
-        margin-right: 0;
-        justify-content: space-between;
+    .transaction-column:nth-child(2),
+    .transaction-column:nth-child(4) {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .footer-logos img{
-        margin-right: 10px;
+    .transaction-row-container {
+        margin-bottom: 20px;
     }
 
-    .footer-social a img {
-        margin-right: 10px;
-    }
-
-    .footer-bottom-links {
-        text-align: center;
-        padding-bottom: 10px;
+    .transaction-column.status {
+        width: auto;
+        margin-top: 10px;
     }
 }
+
+
+
