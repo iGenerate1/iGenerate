@@ -231,12 +231,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .terms {
             color: #007cc5;
-            font-weight: bold;
+            font-size: 12px;
         }
 
         .terms a {
             color: #39c29c;
-            font-weight: bold;
+            font-size: 12px;
         }
 
         .cart-item {
