@@ -3,9 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(/assets/images/profile\ page\ banner.webp);
-    background-repeat: no-repeat;
-    background-size: 500%;
+    background-image: linear-gradient(to bottom, #b5dfda, #a1e9d2, #d0f3e8);
+    height: 100vh;
     box-sizing: border-box;
 }
 
