@@ -337,7 +337,7 @@ h3{
     background-image: linear-gradient(to right, #065380 , #5ea4bb);
     color: white;
     margin: 60px auto;
-    width: 150%;
+    width: 80vw;
     height: 210px;
     max-width: 900px;
     padding: 60px 70px 50px;
@@ -536,8 +536,6 @@ h3{
 
 /* FINAL - Tablet/iPad (width ≤ 900px) */
 @media (max-width: 900px) {
-
-
 
     /* Carousel */
     .carousel-item img {
