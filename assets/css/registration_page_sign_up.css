@@ -1,16 +1,17 @@
-/* General Styles */
 body {
     font-family: Lato, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/assets/images/trybg.png'); /* Background image */
+    background-image: url('/assets/images/trybg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
- 
-/* Social Icons */
+
 .social-icons img {
     width: 40px;
     height: 40px;
@@ -18,32 +19,27 @@ body {
     object-fit: contain;
     cursor: pointer;
 }
- 
+
 .social-icons img:hover {
     opacity: 0.8;
 }
- 
-/* Sign-In Section */
+
 .container {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: auto; /* Adjust height to fit content */
+    height: auto;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
     background: transparent;
     overflow: hidden;
     box-shadow: none;
     padding: 0;
+    display:flex;
+    align-items: center;
+    opacity: 0.95;
 }
- 
-/* Form Section */
+
 .form-section {
     width: 55%;
-    min-width: 300px; /* Ensure the form is not too narrow on smaller screens */
-    height: auto; /* Allow height to adjust based on content */
+    min-width: 300px;
+    height: auto;
     background-color: white;
     padding: 30px;
     text-align: center;
