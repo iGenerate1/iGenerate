@@ -1,8 +1,9 @@
 
 //The sign in button will be replaced with profile button when the user is logged in
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "false";
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const username = localStorage.getItem("username") || "TRAINER"; // Default username
+    
     console.log("User logged in:", isLoggedIn); // Debugging
 
     const signInButton = document.querySelector(".sign-in-btn");
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Once the user is signed in, they will be greeted
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "false"; //false to test without login and true if logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; //false to test without login and true if logged in
     const username = "TRAINER"; 
 
     if (isLoggedIn) {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Once the user is logged in, the bundle section will be displayed
 document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "false"; 
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; 
 
     const bundlesContainer = document.querySelector(".bundle-content");
     const title = document.getElementById("bundles-title");
