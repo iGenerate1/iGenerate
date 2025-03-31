@@ -138,15 +138,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Function to handle add to cart logic
-    window.handleAddToCart = function() {
+    //Event listeners for add to cart
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add-btn")) {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
         if (isLoggedIn) {
-            alert("Item added to cart!");
-            // Add your logic to add the item to the cart here
+            document.getElementById("customAlert").style.display = "flex";
         } else {
-            window.location.href = "signin_page.html"; // Redirect to sign-in page
+            window.location.href = "registration_page_sign_in.html";
         }
-    };
+    }
+});
+
+//Close the custom alert
+document.getElementById("closeAlert").addEventListener("click", () => {
+    document.getElementById("customAlert").style.display = "none";
+});
 
     // Function to filter and display bundles based on category
     window.filterCategory = function(category) {
