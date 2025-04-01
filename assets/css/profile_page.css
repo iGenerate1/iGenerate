@@ -7,7 +7,7 @@ body {
 }
 
 .profile-banner-container {
-    background: url("/assets/images/profile-banner.png") center/cover;
+    background: url("assets/images/profile-banner.png") center/cover;
     padding: 100px 20px;
     color: #ffffff;
     text-align: left;
@@ -142,7 +142,7 @@ body {
 
 .pokemon-profile-banner {
     position: relative;
-    background: url('/assets/images/profile\ page\ banner.webp') no-repeat center center/cover;
+    background: url('assets/images/profile\ page\ banner.webp') no-repeat center center/cover;
     height: 300px;
     display: flex;
     align-items: center;
