@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isLoggedIn) {
             const profileButton = document.createElement("button");
             profileButton.classList.add("profile-btn");
-            profileButton.innerHTML = `
-                <a href="/pages/profile_page.html" id="profileLink">
-                    <i class="fas fa-user"></i>
-                </a>
-            `;
+            profileButton.innerHTML = `<i class="fas fa-user"></i>`;
+            
+            // Redirect to profile page when clicked
+            profileButton.addEventListener("click", () => {
+                window.location.href = "/pages/profile_page.html";
+            });
+
             signInButton.replaceWith(profileButton);
         }
     }
@@ -99,4 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
         const activeLink = document.getElementById(pages[currentPath]);
         if (activeLink) activeLink.classList.add("active");
     }
-});
+})
