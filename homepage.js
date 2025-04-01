@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Define new bundle items
         const newBundles = [
-            { name: "Boost Box", price: "Add to Cart", img: "/assets/images/boost-box.png" },
-            { name: "Great Raid Box", price: "Add to Cart", img: "/assets/images/great-raid-box.png" },
-            { name: "Voyager Box", price: "Add to Cart", img: "/assets/images/voyager-box.png" }
+            { name: "Boost Box", price: "Add to Cart", img: "assets/images/boost-box.png" },
+            { name: "Great Raid Box", price: "Add to Cart", img: "assets/images/great-raid-box.png" },
+            { name: "Voyager Box", price: "Add to Cart", img: "assets/images/voyager-box.png" }
         ];
 
         // Populate the bundle section
