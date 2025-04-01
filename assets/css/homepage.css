@@ -876,8 +876,7 @@ h3{
     }
 
     .featured {
-        margin: 45px;
-        width: 400px;
+        width: 290px;
         height: 350px;
         padding: 20px;
         margin-top: 10px;
@@ -994,8 +993,7 @@ h3{
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 45px;
-        width: 400px;
+        width: 290px;
         height: 350px;
         padding: 20px;
         margin-bottom: 20px;
