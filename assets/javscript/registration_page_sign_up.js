@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playerID: playerID.value,
             pokeCoins: "0 PokéCoins",
             level: 2,
-            profileImage: "/assets/images/profile-page-avatar.png"
+            profileImage: "assets/images/profile-page-avatar.png"
         };
 
         localStorage.setItem("lastUser", JSON.stringify(newUser)); // Store the last user
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.style.display = "flex";
 
         setTimeout(() => {
-            window.location.href = "/pages/registration_page_sign_in.html";
+            window.location.href = "pages/registration_page_sign_in.html";
         }, 2000);
     });
 

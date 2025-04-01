@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         profileButton.innerHTML = `<i class="fas fa-user"></i>`;
 
         profileButton.addEventListener("click", () => {
-            window.location.href = "/pages/profile_page.html"; 
+            window.location.href = "pages/profile_page.html"; 
         });
 
         //Clear the user-buttons container and add new buttons
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //Define page links with corresponding IDs
     let pages = {
         "/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
+        "pages/store_page.html": "storeLink",
+        "pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink",
-        "/pages/transaction_history.html": "transactionLink",
+        "pages/transaction_history.html": "transactionLink",
     };
 
     //Set active class for the matching link

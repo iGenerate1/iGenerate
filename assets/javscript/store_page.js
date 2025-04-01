@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
         profileButton.innerHTML = `<i class="fas fa-user"></i>`;
 
         profileButton.addEventListener("click", () => {
-            window.location.href = "/pages/profile_page.html"; 
+            window.location.href = "pages/profile_page.html"; 
         });
 
         //Create cart button
         const cartButton = document.createElement("button");
         cartButton.classList.add("cart-btn");
         cartButton.innerHTML = `
-            <a href="/pages/cart_page.html" class="nav-link" title="Cart">
+            <a href="pages/cart_page.html" class="nav-link" title="Cart">
                 <i class="fas fa-shopping-cart cart-icon"></i>
             </a>
         `;
@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define page links with corresponding IDs
     let pages = {
         "/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
+        "pages/store_page.html": "storeLink",
+        "pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink",
-        "/pages/transaction_history.html": "transactionLink",
-        "/pages/cart_page.html": "cartLink",
+        "pages/transaction_history.html": "transactionLink",
+        "pages/cart_page.html": "cartLink",
     };
 
     // Set active class for the matching link
@@ -80,30 +80,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Bundle data with categories
     const bundles = [
         /* Items */
-        { name: "Max Mushroom", price: 289, img: "/assets/images/max_mushroom.png", category: "items" },
-        { name: "Super Incubator", price: 88, img: "/assets/images/super_incubator.png", category: "items" },
-        { name: "Egg Incubator", price: 88, img: "/assets/images/egg_incubator.png", category: "items" },
-        { name: "Max Revive", price: 59, img: "/assets/images/max_revive.png", category: "items" },
-        { name: "Premium Battle Pass", price: 88, img: "/assets/images/premium_battle_pass.png", category: "items" },
-        { name: "Max Particle Pack x6", price: 235, img: "/assets/images/max_particle.png", category: "items" },
+        { name: "Max Mushroom", price: 289, img: "assets/images/max_mushroom.png", category: "items" },
+        { name: "Super Incubator", price: 88, img: "assets/images/super_incubator.png", category: "items" },
+        { name: "Egg Incubator", price: 88, img: "assets/images/egg_incubator.png", category: "items" },
+        { name: "Max Revive", price: 59, img: "assets/images/max_revive.png", category: "items" },
+        { name: "Premium Battle Pass", price: 88, img: "assets/images/premium_battle_pass.png", category: "items" },
+        { name: "Max Particle Pack x6", price: 235, img: "assets/images/max_particle.png", category: "items" },
         /* Item Boxes */
-        { name: "Fuzzy Buddy Research Day Ultra Ticket Box", price: 59, description:"1 time purchase only.", img: "/assets/images/fuzzy_buddy.png", category: "item-boxes" },
-        { name: "Bug Out Ultra Ticket Box", price: 59, description:"1 time purchase only.", img: "/assets/images/bug_out.png", category: "item-boxes" },
-        { name: "Power Up Ticket Ultra Ticket Box", price: 289, description:"1 time purchase only.", img: "/assets/images/power_up.png", category: "item-boxes" },
-        { name: "GO Rocket Box", price: 289, description:"1 time purchase only.", img: "/assets/images/go_rocket.png", category: "item-boxes" },
-        { name: "Ultra Raid Box", price: 149, description:"3 time purchase only.", img: "/assets/images/ultra_raid.png", category: "item-boxes" },
-        { name: "Might and Mastery", price: 289, description:"3 time purchase only.", img: "/assets/images/might_mastery.png", category: "item-boxes" },
+        { name: "Fuzzy Buddy Research Day Ultra Ticket Box", price: 59, description:"1 time purchase only.", img: "assets/images/fuzzy_buddy.png", category: "item-boxes" },
+        { name: "Bug Out Ultra Ticket Box", price: 59, description:"1 time purchase only.", img: "assets/images/bug_out.png", category: "item-boxes" },
+        { name: "Power Up Ticket Ultra Ticket Box", price: 289, description:"1 time purchase only.", img: "assets/images/power_up.png", category: "item-boxes" },
+        { name: "GO Rocket Box", price: 289, description:"1 time purchase only.", img: "assets/images/go_rocket.png", category: "item-boxes" },
+        { name: "Ultra Raid Box", price: 149, description:"3 time purchase only.", img: "assets/images/ultra_raid.png", category: "item-boxes" },
+        { name: "Might and Mastery", price: 289, description:"3 time purchase only.", img: "assets/images/might_mastery.png", category: "item-boxes" },
         /* Pokécoins */
-        { name: "110 PokéCoins", price: 29, description:"10 WebStore Bonus Coins", img: "/assets/images/110.png", category: "poke-coins" },
-        { name: "600 PokéCoins", price: 149, description:"50 WebStore Bonus Coins", img: "/assets/images/600.png", category: "poke-coins" },
-        { name: "1,300 PokéCoins", price: 289, description:"100 WebStore Bonus Coins", img: "/assets/images/1300.png", category: "poke-coins" },
-        { name: "2,700 PokéCoins", price: 589, description:"200 WebStore Bonus Coins", img: "/assets/images/2700.png", category: "poke-coins" },
-        { name: "5,600 PokéCoins", price: 1_170, description:"400 WebStore Bonus Coins", img: "/assets/images/5600.png", category: "poke-coins" },
-        { name: "15,500 PokéCoins", price: 2_950, description:"1000 WebStore Bonus Coins", img: "/assets/images/15500.png", category: "poke-coins" },
+        { name: "110 PokéCoins", price: 29, description:"10 WebStore Bonus Coins", img: "assets/images/110.png", category: "poke-coins" },
+        { name: "600 PokéCoins", price: 149, description:"50 WebStore Bonus Coins", img: "assets/images/600.png", category: "poke-coins" },
+        { name: "1,300 PokéCoins", price: 289, description:"100 WebStore Bonus Coins", img: "assets/images/1300.png", category: "poke-coins" },
+        { name: "2,700 PokéCoins", price: 589, description:"200 WebStore Bonus Coins", img: "assets/images/2700.png", category: "poke-coins" },
+        { name: "5,600 PokéCoins", price: 1_170, description:"400 WebStore Bonus Coins", img: "assets/images/5600.png", category: "poke-coins" },
+        { name: "15,500 PokéCoins", price: 2_950, description:"1000 WebStore Bonus Coins", img: "assets/images/15500.png", category: "poke-coins" },
         /* Daily Bundles */
-        { name: "Veteran Box", price: 1025 , img: "/assets/images/veteran_box.png", category: "daily-bundles" },
-        { name: "Expert Box", price: 550 , img: "/assets/images/expert_box.png", category: "daily-bundles" },
-        { name: "Voyager Box", price: 2500 , img: "/assets/images/voyager_box.png", category: "daily-bundles" }
+        { name: "Veteran Box", price: 1025 , img: "assets/images/veteran_box.png", category: "daily-bundles" },
+        { name: "Expert Box", price: 550 , img: "assets/images/expert_box.png", category: "daily-bundles" },
+        { name: "Voyager Box", price: 2500 , img: "assets/images/voyager_box.png", category: "daily-bundles" }
     ];
 
     // Function to create and display bundle cards

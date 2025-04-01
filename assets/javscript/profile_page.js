@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const profileButton = document.createElement("button");
         profileButton.classList.add("profile-btn");
-        profileButton.innerHTML = `<a href="/pages/profile_page.html" id="profileLink"><i class="fas fa-user"></i></a>`;
+        profileButton.innerHTML = `<a href="pages/profile_page.html" id="profileLink"><i class="fas fa-user"></i></a>`;
 
         signInButton.replaceWith(profileButton);
     }
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Populating profile page with user data.");
 
         document.querySelector(".user-name").textContent = userData.ign;
-        document.querySelector(".poke-coins").innerHTML = `<img src="/assets/images/Pokecoins.png" class="coin-image"> ${userData.pokeCoins}`;
+        document.querySelector(".poke-coins").innerHTML = `<img src="assets/images/Pokecoins.png" class="coin-image"> ${userData.pokeCoins}`;
         document.querySelector(".email").textContent = userData.email;
         document.querySelector(".id-number").textContent = userData.playerID;
         document.querySelector(".ign").textContent = userData.ign;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Ensure profile image updates correctly
         const profilePic = document.querySelector(".profile-pic");
-        profilePic.src = userData.profileImage ? userData.profileImage : "/assets/images/profile-page-avatar.png";
+        profilePic.src = userData.profileImage ? userData.profileImage : "assets/images/profile-page-avatar.png";
 
         // Update level progress bar
         const levelProgress = document.querySelector(".level-progress");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Redirect after logging out
             setTimeout(() => {
-                window.location.href = "/pages/registration_page_sign_in.html";
+                window.location.href = "pages/registration_page_sign_in.html";
             }, 300);
         });
     } else {
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPath = window.location.pathname.split("/").pop() || "";
     let pages = {
         "/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
+        "pages/store_page.html": "storeLink",
+        "pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

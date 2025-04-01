@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Redirect to profile page when clicked
             profileButton.addEventListener("click", () => {
-                window.location.href = "/pages/profile_page.html";
+                window.location.href = "pages/profile_page.html";
             });
 
             signInButton.replaceWith(profileButton);
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Define new bundle items
         const newBundles = [
-            { name: "Boost Box", price: "Add to Cart", img: "/assets/images/boost-box.png" },
-            { name: "Great Raid Box", price: "Add to Cart", img: "/assets/images/great-raid-box.png" },
-            { name: "Voyager Box", price: "Add to Cart", img: "/assets/images/voyager-box.png" }
+            { name: "Boost Box", price: "Add to Cart", img: "assets/images/boost-box.png" },
+            { name: "Great Raid Box", price: "Add to Cart", img: "assets/images/great-raid-box.png" },
+            { name: "Voyager Box", price: "Add to Cart", img: "assets/images/voyager-box.png" }
         ];
 
         // Populate the bundle section
@@ -92,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname.split("/").pop() || "";
     const pages = {
         "/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
+        "pages/store_page.html": "storeLink",
+        "pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

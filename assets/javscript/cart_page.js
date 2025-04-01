@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-content">
             <div class="cart-item" data-price="259">
-                <img src="/assets/images/cart item 1.png" alt="Deep Depths Ultra Ticket Box" class="item-img">
+                <img src="assets/images/cart item 1.png" alt="Deep Depths Ultra Ticket Box" class="item-img">
                 <div class="item-info">
                     <p class="item-name">Deep Depths Ultra Ticket Box</p>
                     <p class="quantity">x1</p>
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="price">₱259.00</p>
             </div>
             <div class="cart-item" data-price="305">
-                <img src="/assets/images/cart item 2.png" alt="Mega Absol Raid Day Ultra Ticket Box" class="item-img">
+                <img src="assets/images/cart item 2.png" alt="Mega Absol Raid Day Ultra Ticket Box" class="item-img">
                 <div class="item-info">
                     <p class="item-name">Mega Absol Raid Day Ultra Ticket Box</p>
                     <p class="quantity">x1</p>
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="price">₱305.00</p>
             </div>
             <div class="cart-item" data-price="190">
-                <img src="/assets/images/cart item 3'.webp" alt="1,300 PokéCoins" class="item-img">
+                <img src="assets/images/cart item 3'.webp" alt="1,300 PokéCoins" class="item-img">
                 <div class="item-info">
                     <p class="item-name">1,300 PokéCoins</p>
                     <p class="quantity">x1</p>

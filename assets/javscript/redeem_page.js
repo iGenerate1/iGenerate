@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Append event listener to navigate to profile page
         profileButton.addEventListener("click", () => {
-            window.location.href = "/pages/profile_page.html"; // Change this to your actual profile page URL
+            window.location.href = "pages/profile_page.html"; // Change this to your actual profile page URL
         });
 
         signInButton.replaceWith(profileButton);
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         redeemBtn.addEventListener("click", () => {
             if (!isLoggedIn) {
                 console.log("User not logged in. Redirecting to sign-in...");
-                window.location.href = "/pages/registration_page_sign_in.html"; // Redirect if not logged in
+                window.location.href = "pages/registration_page_sign_in.html"; // Redirect if not logged in
                 return;
             }
 
@@ -202,8 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //Define page links with corresponding IDs
     let pages = {
         "/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
+        "pages/store_page.html": "storeLink",
+        "pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 
