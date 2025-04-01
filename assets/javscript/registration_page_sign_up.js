@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ign: ign,
             playerID: playerID,
             pokeCoins: "10 PokéCoins",
-            level: 1,
+            level: 2,
             profileImage: "/assets/images/profile-page-avatar.png" // Corrected path
         };
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.style.display = "flex";
 
         setTimeout(() => {
-            window.location.href = "registration_page_sign_in.html";
+            window.location.href = "/pages/registration_page_sign_in.html";
         }, 2000);
     });
 

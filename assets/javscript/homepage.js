@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const profileButton = document.createElement("button");
             profileButton.classList.add("profile-btn");
             profileButton.innerHTML = `
-                <a href="profile_page.html" id="profileLink">
+                <a href="/pages/profile_page.html" id="profileLink">
                     <i class="fas fa-user"></i>
                 </a>
             `;
@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Highlight Active Navigation Links
     const currentPath = window.location.pathname.split("/").pop() || "";
     const pages = {
-        "homepage.html": "homeLink",
-        "store_page.html": "storeLink",
-        "redeem_page.html": "redeemLink",
+        "/pages/homepage.html": "homeLink",
+        "/pages/store_page.html": "storeLink",
+        "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

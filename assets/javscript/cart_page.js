@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Xsolla independently collects essential cookies on this page and further while processing the purchase which is covered by Xsolla’s <a href="https://xsolla.com/cookie"> Cookie Policy. </a><br>
             Please note that for this purchase, Xsolla is the authorized merchant of record and controller of the data you submit on this page.<br>
             If you have any questions, please reach out to <a href="https://help.xsolla.com/">Xsolla Gamer Support</a>. <br>
-            Legal|Refund Policy</p>
+            <a href="https://xsolla.com/legal-agreements" style="text-decoration:none;">Legal</a>|<a href="https://xsolla.com/refund-policy" style="text-decoration:none;">Refund Policy<a></p>
         </div>
     `;
     popup.style.display = "none";
@@ -130,11 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const cardSection = document.querySelector(".card-section");
         cardSection.style.display = "block"; // Make sure it's visible
         cardSection.querySelector(".card-input").style.marginBottom = "10px"; // Add spacing between inputs
+        cardSection.querySelector(".card-input").style.borderRadius = "15px";
         cardSection.querySelector(".card-details").style.display = "flex"; // Ensure card details are visible in a row
         cardSection.querySelector(".expiry-input").style.marginRight = "10px"; // Add space between expiry and CVV
         cardSection.querySelector(".cvv-input").style.marginLeft = "10px"; // Add space between expiry and CVV
         cardSection.querySelector(".billing p").style.marginTop = "10px"; // Add space before billing
         cardSection.querySelector(".email-input").style.marginBottom = "5px"; // Space for email input
+        cardSection.querySelector(".terms").style.marginBottom = "-14px"; // Space for terms
     }
 
     // Add validation for card payment
@@ -151,24 +153,47 @@ document.addEventListener("DOMContentLoaded", function () {
         const cvvPattern = /^[0-9]{3}$/;
     
         if (!cardNumber.match(cardNumberPattern)) {
-            alert("Please enter a valid 16-digit card number.");
+            triggerShakeAndAlert(".card-input", "Please enter a valid 16-digit card number.");
             return;
         }
     
         if (!expiryDate.match(expiryDatePattern)) {
-            alert("Please enter a valid expiry date (MM/YY).");
+            triggerShakeAndAlert(".expiry-input", "Please enter a valid expiry date (MM/YY).");
             return;
         }
     
         if (!cvv.match(cvvPattern)) {
-            alert("Please enter a valid 3-digit CVV.");
+            triggerShakeAndAlert(".cvv-input", "Please enter a valid 3-digit CVV.");
             return;
         }
     
         if (!email) {
-            alert("Please enter your email address.");
+            triggerShakeAndAlert(".email-input", "Please enter your email address.");
             return;
         }
+
+        function triggerShakeAndAlert(inputSelector, message) {
+            const inputElement = document.querySelector(inputSelector);
+            const alertMessage = document.createElement("div");
+            alertMessage.textContent = message;
+            alertMessage.style.color = "red";
+            alertMessage.style.fontWeight = "bold";
+            alertMessage.style.marginTop = "10px";
+            inputElement.parentNode.insertBefore(alertMessage, inputElement.nextSibling);
+    
+            // Shake the textbox
+            inputElement.classList.add("shake");
+    
+            // Remove the alert abruptly after a brief delay
+            setTimeout(() => {
+                alertMessage.remove();
+            }, 1500);  // Alert removed after 1.5 seconds
+    
+            // Optional: remove shake effect after animation
+            setTimeout(() => {
+                inputElement.classList.remove("shake");
+            }, 1000);  // Shake effect lasts for 1 second
+        }    
     
         // If validation is successful, show success message
         const successPopup = document.createElement("div");
@@ -186,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         document.querySelector(".close-success").addEventListener("click", function () {
             successPopup.remove();
-            window.location.href = "homepage.html";
+            window.location.href = "/pages/homepage.html";
         });
     });
     
@@ -244,7 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gap: 12px; /* Space between buttons */
             margin-bottom: 15px;
         }
-
         .payment-methods .method {
             width: 130px; /* Adjust width */
             height: 80px; /* Adjust height */
@@ -261,7 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
-
         .payment-methods .method:hover {
             border-color: #0073e6; /* Highlight border on hover */
         }
@@ -285,7 +308,17 @@ document.addEventListener("DOMContentLoaded", function () {
             flex-direction: column;
             gap: 10px;
         }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
 
+        .shake {
+            animation: shake 0.5s ease-in-out;  /* Duration of shake */
+        }
         .payment-h2 {
             color: #007cc5;
             font-weight: 600 !important;
@@ -295,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
             padding: 10px;
             border: 1px solid #ccc;
             width: 100%;
-            border-radius: 15px;
+            border-radius: 15px !important;
         }
         .card-details {
             display: flex;
@@ -314,6 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .terms {
             color: #007cc5;
             font-size: 12px;
+            margin-bottom: -14px;            
         }
 
         .terms a {

@@ -6,6 +6,29 @@ body {
     background-color: #e5f3efd5;
 }
 
+.profile-banner-container {
+    background: url("/assets/images/profile-banner.png") center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    text-align: left;
+    text-shadow: 2px 2px #2e2828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-banner h1 {
+    margin-top: 2vw;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.profile-banner p {
+    font-size: 2.5vw;
+    margin-top: 1vw;
+}
+
+
 .profile-container {
     background: #fff;
     padding: 20px;

@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
         profileButton.innerHTML = `<i class="fas fa-user"></i>`;
 
         profileButton.addEventListener("click", () => {
-            window.location.href = "profile_page.html"; 
+            window.location.href = "/pages/profile_page.html"; 
         });
 
         //Create cart button
         const cartButton = document.createElement("button");
         cartButton.classList.add("cart-btn");
         cartButton.innerHTML = `
-            <a href="cart_page.html" class="nav-link" title="Cart">
+            <a href="/pages/cart_page.html" class="nav-link" title="Cart">
                 <i class="fas fa-shopping-cart cart-icon"></i>
             </a>
         `;
@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define page links with corresponding IDs
     let pages = {
-        "homepage.html": "homeLink",
-        "store_page.html": "storeLink",
-        "redeem_page.html": "redeemLink",
+        "/pages/homepage.html": "homeLink",
+        "/pages/store_page.html": "storeLink",
+        "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink",
-        "transaction_history.html": "transactionLink",
-        "cart_page.html": "cartLink",
+        "/pages/transaction_history.html": "transactionLink",
+        "/pages/cart_page.html": "cartLink",
     };
 
     // Set active class for the matching link

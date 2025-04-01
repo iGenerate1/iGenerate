@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.style.display = "flex";
 
             setTimeout(() => {
-                window.location.href = "homepage.html";
+                window.location.href = "/pages/homepage.html";
             }, 2000);
         } else {
             console.log("Invalid login attempt.");

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Append event listener to navigate to profile page
         profileButton.addEventListener("click", () => {
-            window.location.href = "profile_page.html"; // Change this to your actual profile page URL
+            window.location.href = "/pages/profile_page.html"; // Change this to your actual profile page URL
         });
 
         signInButton.replaceWith(profileButton);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create input field dynamically
     const redeemInput = document.createElement("input");
     redeemInput.type = "text";
-    redeemInput.placeholder = "Enter redemption code";
+    redeemInput.placeholder = "Ex: ABCD-1234-EFGH";
     redeemInput.classList.add("redeem-input");
 
     // Insert input before button
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         redeemBtn.addEventListener("click", () => {
             if (!isLoggedIn) {
                 console.log("User not logged in. Redirecting to sign-in...");
-                window.location.href = "registration_page_sign_in.html"; // Redirect if not logged in
+                window.location.href = "/pages/registration_page_sign_in.html"; // Redirect if not logged in
                 return;
             }
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Close pop-up on clicking "OK"
             document.querySelector(".close-success").addEventListener("click", function () {
                 successPopup.remove();
-                window.location.href = "homepage.html"; // Redirect after closing
+                window.location.href = "/pages/homepage.html"; // Redirect after closing
             });
         });
     } else {
@@ -201,9 +201,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Define page links with corresponding IDs
     let pages = {
-        "homepage.html": "homeLink",
-        "store_page.html": "storeLink",
-        "redeem_page.html": "redeemLink",
+        "/pages/homepage.html": "homeLink",
+        "/pages/store_page.html": "storeLink",
+        "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 
