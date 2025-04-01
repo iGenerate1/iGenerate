@@ -7,7 +7,7 @@ body {
 }
 
 .profile-banner-container {
-    background: url("assets/images/profile-banner.png") center/cover;
+    background: url('../images/profile-banner.png') center/cover;
     padding: 100px 20px;
     color: #ffffff;
     text-align: left;
