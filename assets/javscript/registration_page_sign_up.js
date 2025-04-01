@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             password: password,
             ign: ign,
             playerID: playerID,
-            pokeCoins: "10 PokéCoins",
+            pokeCoins: "0 PokéCoins",
             level: 2,
             profileImage: "/assets/images/profile-page-avatar.png" // Corrected path
         };
