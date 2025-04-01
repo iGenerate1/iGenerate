@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 localStorage.removeItem("lastUser"); // Delete last registered user
-                window.location.href = "/index.html";
+                window.location.href = "/pages/index.html";
             }, 2000);
         } else {
             console.log("Invalid login attempt.");

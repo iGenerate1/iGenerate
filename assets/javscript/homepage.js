@@ -91,9 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Highlight Active Navigation Links
     const currentPath = window.location.pathname.split("/").pop() || "";
     const pages = {
+<<<<<<< HEAD
         "/index.html": "homeLink",
         "pages/store_page.html": "storeLink",
         "pages/redeem_page.html": "redeemLink",
+=======
+        "/pages/index.html": "homeLink",
+        "/pages/store_page.html": "storeLink",
+        "/pages/redeem_page.html": "redeemLink",
+>>>>>>> parent of 1447fce (fixed directory)
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 
