@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Active Page Highlighting
     let currentPath = window.location.pathname.split("/").pop() || "";
     let pages = {
-        "/pages/homepage.html": "homeLink",
+        "/pages/index.html": "homeLink",
         "/pages/store_page.html": "storeLink",
         "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"

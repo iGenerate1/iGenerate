@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Close pop-up on clicking "OK"
             document.querySelector(".close-success").addEventListener("click", function () {
                 successPopup.remove();
-                window.location.href = "/pages/homepage.html"; // Redirect after closing
+                window.location.href = "/pages/index.html"; // Redirect after closing
             });
         });
     } else {
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Define page links with corresponding IDs
     let pages = {
-        "/pages/homepage.html": "homeLink",
+        "/pages/index.html": "homeLink",
         "/pages/store_page.html": "storeLink",
         "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"

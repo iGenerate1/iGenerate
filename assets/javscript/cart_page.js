@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         document.querySelector(".close-success").addEventListener("click", function () {
             successPopup.remove();
-            window.location.href = "/pages/homepage.html";
+            window.location.href = "/pages/index.html";
         });
     });
     
