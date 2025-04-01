@@ -59,7 +59,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('assets/images/store-featured.png');
+    background-image: url('/assets/images/store-featured.png');
     height: 40vh;
     position: relative;
     text-align: center;

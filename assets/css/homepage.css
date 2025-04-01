@@ -264,7 +264,7 @@ h3{
 
 /* Individual bundle card styling */
 .bundle-card {
-    background-image: url("assets/images/real-pokemon.png");
+    background-image: url("/assets/images/real-pokemon.png");
     background-size: cover;
     background-position: 50% 9%;
     background-size: 150px;
@@ -947,7 +947,7 @@ h3{
     /* Individual bundle card styling */
 
     .bundle-card {
-        background-image: url("assets/images/real-pokemon.png");
+        background-image: url("/assets/images/real-pokemon.png");
         width: 90vw;
         height: 320px;
         margin-left: 20px;
