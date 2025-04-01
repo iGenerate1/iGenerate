@@ -27,7 +27,7 @@ body {
 
 /* Transaction Header Container */
 .transaction-header-container {
-    background: url('assets/images/transaction\ banner.webp') center/cover;
+    background: url('../images/transaction\ banner.webp') center/cover;
     padding: 100px 20px;
     color: #ffffff;
     text-align: left;
