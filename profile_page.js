@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const profileButton = document.createElement("button");
         profileButton.classList.add("profile-btn");
-        profileButton.innerHTML = `<a href="pages/profile_page.html" id="profileLink"><i class="fas fa-user"></i></a>`;
+        profileButton.innerHTML = `<a href="profile_page.html" id="profileLink"><i class="fas fa-user"></i></a>`;
 
         signInButton.replaceWith(profileButton);
     }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Redirect after logging out
             setTimeout(() => {
-                window.location.href = "pages/registration_page_sign_in.html";
+                window.location.href = "registration_page_sign_in.html";
             }, 300);
         });
     } else {
@@ -61,15 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Active Page Highlighting
     let currentPath = window.location.pathname.split("/").pop() || "";
     let pages = {
-<<<<<<< HEAD
-        "/index.html": "homeLink",
-        "pages/store_page.html": "storeLink",
-        "pages/redeem_page.html": "redeemLink",
-=======
-        "/pages/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
->>>>>>> parent of 1447fce (fixed directory)
+        "index.html": "homeLink",
+        "store_page.html": "storeLink",
+        "redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

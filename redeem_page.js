@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Append event listener to navigate to profile page
         profileButton.addEventListener("click", () => {
-            window.location.href = "pages/profile_page.html"; // Change this to your actual profile page URL
+            window.location.href = "profile_page.html"; // Change this to your actual profile page URL
         });
 
         signInButton.replaceWith(profileButton);
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         redeemBtn.addEventListener("click", () => {
             if (!isLoggedIn) {
                 console.log("User not logged in. Redirecting to sign-in...");
-                window.location.href = "pages/registration_page_sign_in.html"; // Redirect if not logged in
+                window.location.href = "registration_page_sign_in.html"; // Redirect if not logged in
                 return;
             }
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Close pop-up on clicking "OK"
             document.querySelector(".close-success").addEventListener("click", function () {
                 successPopup.remove();
-                window.location.href = "/pages/index.html"; // Redirect after closing
+                window.location.href = "index.html"; // Redirect after closing
             });
         });
     } else {
@@ -201,15 +201,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Define page links with corresponding IDs
     let pages = {
-<<<<<<< HEAD
-        "/index.html": "homeLink",
-        "pages/store_page.html": "storeLink",
-        "pages/redeem_page.html": "redeemLink",
-=======
-        "/pages/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
->>>>>>> parent of 1447fce (fixed directory)
+        "index.html": "homeLink",
+        "store_page.html": "storeLink",
+        "redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

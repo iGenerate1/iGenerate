@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Redirect to profile page when clicked
             profileButton.addEventListener("click", () => {
-                window.location.href = "pages/profile_page.html";
+                window.location.href = "profile_page.html";
             });
 
             signInButton.replaceWith(profileButton);
@@ -91,15 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Highlight Active Navigation Links
     const currentPath = window.location.pathname.split("/").pop() || "";
     const pages = {
-<<<<<<< HEAD
-        "/index.html": "homeLink",
-        "pages/store_page.html": "storeLink",
-        "pages/redeem_page.html": "redeemLink",
-=======
-        "/pages/index.html": "homeLink",
-        "/pages/store_page.html": "storeLink",
-        "/pages/redeem_page.html": "redeemLink",
->>>>>>> parent of 1447fce (fixed directory)
+        "index.html": "homeLink",
+        "store_page.html": "storeLink",
+        "redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink"
     };
 

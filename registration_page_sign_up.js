@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.style.display = "flex";
 
         setTimeout(() => {
-            window.location.href = "pages/registration_page_sign_in.html";
+            window.location.href = "registration_page_sign_in.html";
         }, 2000);
     });
 
