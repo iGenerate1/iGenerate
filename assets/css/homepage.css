@@ -1017,23 +1017,23 @@ h3{
     .app-stores button:nth-child(3) img {
         width: 100px; 
         height: 30px;
-        margin-left: 160px; 
-        margin-top: -90px;
+        margin-left: 130px;
+        margin-top: -140px;
     }
 
     /*Google Play Store Button*/
     .app-stores button:nth-child(2) img {
         width: 100px; 
         height: 30px; 
-        margin-left: 160px;
-        margin-bottom: -30px; 
+        margin-left: 130px;
+        margin-top: 1px; 
     }
 
     /*Apple App Store Button*/
     .app-stores button:nth-child(1) img {
         width: 100px; 
         height: 30px; 
-        margin-left: 160px;
+        margin-left: 130px;
         margin-top: -80px;
     }
 
