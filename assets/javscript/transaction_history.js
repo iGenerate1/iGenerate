@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Define page links with corresponding IDs
     let pages = {
-        "/pages/index.html": "homeLink",
+        "/index.html": "homeLink",
         "/pages/store_page.html": "storeLink",
         "/pages/redeem_page.html": "redeemLink",
         "https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo": "eventLink",
