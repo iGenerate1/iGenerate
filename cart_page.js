@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h5>To proceed with payment, please go to 
                     <a href="https://cert.unionpay.com/cert-company-en/#/login?redirect=%2Fdashboard" 
                     style="text-decoration: none; color: #39c29c;" target="_blank">UnionPay</a>
-                </h5>
+                </h5> <br>
                 <p class="terms">By proceeding, you confirm you’re an adult according to your country laws and agree to be bound by <a href="https://xsolla.com/eula">Xsolla’s EULA</a> .<br>
                     Xsolla independently collects essential cookies on this page and further while processing the purchase which is covered by Xsolla’s <a href="https://xsolla.com/cookie"> Cookie Policy. </a><br>
                     Please note that for this purchase, Xsolla is the authorized merchant of record and controller of the data you submit on this page.<br>
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h5>To proceed with payment, please go to 
                     <a href="https://www.paypal.com/signin" 
                     style="text-decoration: none; color: #39c29c;" target="_blank">PayPal</a>
-                </h5>
+                </h5> <br>
                 <p class="terms">By proceeding, you confirm you’re an adult according to your country laws and agree to be bound by <a href="https://xsolla.com/eula">Xsolla’s EULA</a> .<br>
                     Xsolla independently collects essential cookies on this page and further while processing the purchase which is covered by Xsolla’s <a href="https://xsolla.com/cookie"> Cookie Policy. </a><br>
                     Please note that for this purchase, Xsolla is the authorized merchant of record and controller of the data you submit on this page.<br>
