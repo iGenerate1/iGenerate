@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Redirect after 2 seconds
         setTimeout(() => {
             window.location.href = "registration_page_sign_in.html";
-        }, 2000);
+        }, 1500);
     });
 
     closeBtn.addEventListener("click", function () {

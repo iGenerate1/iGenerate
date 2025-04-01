@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 localStorage.removeItem("lastUser"); // Delete last registered user
                 window.location.href = "index.html";
-            }, 2000);
+            }, 1500);
         } else {
             console.log("Invalid login attempt.");
             showError(email, "Invalid email or password.");
