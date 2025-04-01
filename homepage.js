@@ -22,6 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+        //Transaction Link for signed up
+        const transactionLink = document.querySelector("a[href='transaction_history.html']");
+        if (transactionLink) {
+            if (!isLoggedIn) {
+                transactionLink.parentElement.style.display = "none"; // Hide if not logged in
+            }
+        }
+
     // Update Greeting in Carousel if Logged In
     const carouselHeading = document.querySelector(".carousel-caption h1");
     if (carouselHeading && isLoggedIn) {

@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
         userButtonsContainer.appendChild(cartButton);
         userButtonsContainer.appendChild(profileButton);
     }
+
+       //Transaction Link for signed up
+       const transactionLink = document.querySelector("a[href='transaction_history.html']");
+       if (transactionLink) {
+           if (!isLoggedIn) {
+               transactionLink.parentElement.style.display = "none"; // Hide if not logged in
+           }
+       }
 });
 
 // Active links for the current page
