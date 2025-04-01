@@ -105,7 +105,7 @@ body {
     height: 60%;
     position: absolute;
     bottom: 10px;
-    animation: slide 20s linear infinite;
+    animation: slide 18s linear infinite;
     z-index: -2;
 }
 
@@ -167,10 +167,15 @@ h3 {
 }
 
 .featured {
-    background-image: linear-gradient(to right, #065380, #5ea4bb);
+    background-image: url('../images/store-banner2.png');
+    /*background-image: linear-gradient(to right, #065380, #5ea4bb);*/
     color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 48vh;
     margin: 10px auto 60px;
-    width: 100%;
+    width: ;
     max-width: 900px;
     padding: 30px 40px;
     display: flex;
@@ -184,12 +189,18 @@ h3 {
 
 .featured-content {
     flex: 1;
-}
+    
 
 .featured-image img {
     width: 100px;
     height: 110px;
     left: 30%;
+}
+
+}
+.featured-content h2 {
+    text-shadow: 2px 2px 2px #2e2828;
+    font-size: 2.5em;
 }
 
 .featured-price {
@@ -201,24 +212,27 @@ h3 {
     display: inline-block;
     margin-top: 5px;
     color: white;
+
 }
+
 .store-tabs {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
+    
 }
 
 .tab-btn {
     background: none;
     border: none;
     color: #007cc5;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     font-weight: bold;
     position: relative;
@@ -420,6 +434,8 @@ h3 {
 
     .featured {
         padding: 20px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .featured-image img {
