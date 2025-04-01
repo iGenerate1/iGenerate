@@ -168,14 +168,12 @@ h3 {
 
 .featured {
     background-image: url('../images/store-banner2.png');
-    /*background-image: linear-gradient(to right, #065380, #5ea4bb);*/
     color: white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 48vh;
     margin: 10px auto 60px;
-    width: ;
     max-width: 900px;
     padding: 30px 40px;
     display: flex;
