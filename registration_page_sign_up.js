@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
+    const form = document.querySelector("#signup-form");
     const popup = document.getElementById("signup-popup");
     const popupMessage = document.getElementById("signup-popup-message");
     const closeBtn = document.getElementById("signup-close-popup");
@@ -25,13 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(style);
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent form from submitting the old way
 
         const email = form.elements["email"];
         const password = form.elements["password"];
         const confirmPassword = form.elements["confirmPassword"];
         const ign = form.elements["ign"];
-        const playerID = form.elements["playerID"];
 
         // Clear previous errors
         document.querySelectorAll(".error-message").forEach(el => el.remove());
@@ -56,29 +55,28 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Player ID Validation (Must be numeric with spaces)
-        const playerIDPattern = /^\d{3} \d{3}$/;
-        if (!playerIDPattern.test(playerID.value)) {
-            showError(playerID, "Player ID must be in the format: 123 456.");
-            return;
-        }
+        // Generate Player ID
+        const generatedPlayerID = generatePlayerID(); // Generate Player ID
         
         // Store user data
         const newUser = {
             email: email.value,
             password: password.value,
             ign: ign.value,
-            playerID: playerID.value,
+            playerID: generatedPlayerID,  // Store the generated Player ID
             pokeCoins: "0 PokéCoins",
             level: 2,
             profileImage: "assets/images/profile-page-avatar.png"
         };
 
-        localStorage.setItem("lastUser", JSON.stringify(newUser)); // Store the last user
+        // Store the user data in localStorage
+        localStorage.setItem("lastUser", JSON.stringify(newUser));
 
+        // Show the success popup
         popupMessage.textContent = "Sign-up successful! Redirecting...";
         popup.style.display = "flex";
 
+        // Redirect after 2 seconds
         setTimeout(() => {
             window.location.href = "registration_page_sign_in.html";
         }, 2000);
@@ -87,6 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener("click", function () {
         popup.style.display = "none";
     });
+
+    // Function to generate random Player ID in the format #### #### ####
+    function generatePlayerID() {
+        const randomID = `${Math.floor(1000 + Math.random() * 9000)} ${Math.floor(1000 + Math.random() * 9000)} ${Math.floor(1000 + Math.random() * 9000)}`;
+        return randomID;
+    }
 
     // Function to show error message and shake effect
     function showError(inputElement, message) {
