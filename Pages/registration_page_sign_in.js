@@ -1,30 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const popup = document.getElementById("login-popup");
-    const popupMessage = document.getElementById("popup-message");
-    const closeBtn = document.getElementById("close-popup");
+    const form = document.getElementById("signin-form");
+    const popup = document.getElementById("signin-popup");
+    const popupMessage = document.getElementById("signin-popup-message");
+    const closeBtn = document.getElementById("signin-close-popup");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent page refresh
 
         const email = form.elements[0].value;
         const password = form.elements[1].value;
 
-        // Retrieve stored user data
-        const storedUser = JSON.parse(localStorage.getItem("user"));
+        console.log("Form submitted: ", email, password); // Debugging log
 
-        // Check if user exists and credentials match
-        if (storedUser && storedUser.email === email && storedUser.password === password) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const storedUser = users.find(user => user.email === email && user.password === password);
+
+        if (storedUser) {
+            console.log("User authenticated.");
             localStorage.setItem("isLoggedIn", "true");
-            
-            // Show custom pop-up
+            localStorage.setItem("currentUser", JSON.stringify(storedUser));
+
             popupMessage.textContent = "Sign-in successful! Redirecting...";
             popup.style.display = "flex";
 
             setTimeout(() => {
-                window.location.href = "homepage.html"; // Redirect to homepage
+                window.location.href = "homepage.html";
             }, 2000);
         } else {
+            console.log("Invalid login attempt.");
             popupMessage.textContent = "Invalid email or password.";
             popup.style.display = "flex";
         }

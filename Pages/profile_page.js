@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".id-number").textContent = userData.playerID;
         document.querySelector(".ign").textContent = userData.ign;
         document.querySelector(".level-value").textContent = userData.level;
-        document.querySelector(".profile-pic").src = userData.profileImage;
+        document.querySelector(".profile-pic").src = "/assets/images/profile-page-avatar.png";
 
         const levelProgress = document.querySelector(".level-progress");
         levelProgress.style.width = `${(userData.level / 50) * 100}%`;

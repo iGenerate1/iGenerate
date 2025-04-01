@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const email = form.elements[0].value;
-        const password = form.elements[1].value;
-        const confirmPassword = form.elements[2].value;
-        const ign = form.elements[3].value;
-        const playerID = form.elements[4].value;
+        const email = form.elements["email"].value; // Accessing by name instead of index
+        const password = form.elements["password"].value;
+        const confirmPassword = form.elements["confirmPassword"].value;
+        const ign = form.elements["ign"].value;
+        const playerID = form.elements["playerID"].value;
 
         if (password !== confirmPassword) {
             popupMessage.textContent = "Passwords do not match.";
@@ -19,17 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const userData = {
+        const newUser = {
             email: email,
             password: password,
             ign: ign,
             playerID: playerID,
             pokeCoins: "10 PokéCoins",
             level: 1,
-            profileImage: "/assets/images/profile-placeholder.png"
+            profileImage: "/assets/images/profile-page-avatar.png" // Corrected path
         };
 
-        localStorage.setItem("user", JSON.stringify(userData));
+        let users = JSON.parse(localStorage.getItem("users")) || []; // Retrieve or initialize array
+        users.push(newUser); // Add new user to the array
+        localStorage.setItem("users", JSON.stringify(users)); // Save array back to localStorage
 
         popupMessage.textContent = "Sign-up successful! Redirecting...";
         popup.style.display = "flex";

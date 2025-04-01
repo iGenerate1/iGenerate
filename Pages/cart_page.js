@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const checkoutBtn = document.querySelector(".checkout-btn");
     const body = document.querySelector("body");
-    
-    // Create the overlay
+
+    // Create the overlay (if needed for future use, you can remove it if you prefer)
     const overlay = document.createElement("div");
     overlay.classList.add("overlay");
     overlay.style.display = "none";
     body.appendChild(overlay);
-    
-    // Create the popup container
+
+    // Create the popup container (replacing the pop-up with direct billing integration)
     const popup = document.createElement("div");
     popup.classList.add("popup-container");
     popup.innerHTML = `
@@ -48,16 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="method active">Card</button>
                 <button class="method">PayPal</button>
             </div>
-            <h2 class="payment-h2">Payment via credit card or debit card </h2>        
-            <div class="input-group">
+            <h2 class="payment-h2">Payment via credit card or debit card</h2>        
+            <div class="input-group card-section">
                 <input type="text" placeholder="Card Number" class="card-input" />
                 <div class="card-details">
                     <input type="text" placeholder="MM/YY" class="expiry-input" />
                     <input type="text" placeholder="CVV2/CVV2" class="cvv-input" />
                 </div>
             <div class="billing"> 
-                    <p>Billing information <br>
-                    <input type="email" placeholder="(Email)" class="email-input"/>
+                <p>Billing information <br>
+                <input type="email" placeholder="(Email)" class="email-input"/>
             </div>
             <div class="confirmation-section">
                 <button class="confirm-payment">Confirm Payment</button>
@@ -69,27 +69,108 @@ document.addEventListener("DOMContentLoaded", function () {
             Please note that for this purchase, Xsolla is the authorized merchant of record and controller of the data you submit on this page.<br>
             If you have any questions, please reach out to <a href="https://help.xsolla.com/">Xsolla Gamer Support</a>. <br>
             Legal|Refund Policy</p>
-
         </div>
     `;
     popup.style.display = "none";
     body.appendChild(popup);
-    
+
     function showPopup() {
-        overlay.style.display = "block";
         popup.style.display = "block";
     }
-    
+
     function hidePopup() {
-        overlay.style.display = "none";
         popup.style.display = "none";
     }
-    
+
+    // Handle payment method selection
+    const paymentMethods = document.querySelectorAll(".payment-methods .method");
+    paymentMethods.forEach(function (method) {
+        method.addEventListener("click", function () {
+            // Remove 'active' class from all buttons
+            paymentMethods.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            // Add 'active' class to the clicked button
+            method.classList.add("active");
+
+            // Change the content based on selected payment method
+            const selectedMethod = method.textContent;
+
+            const paymentContent = document.querySelector(".popup-content");
+
+            if (selectedMethod === "UnionPay") {
+                paymentContent.querySelector(".payment-h2").innerHTML = `
+                    <h2>To proceed with payment, please go to <a href="https://cert.unionpay.com/cert-company-en/#/login?redirect=%2Fdashboard" target="_blank">UnionPay</a></h2>
+                `;  
+                document.querySelector(".card-section").style.display = "none"; // Hide card section
+            } else if (selectedMethod === "Gcash") {
+                paymentContent.querySelector(".payment-h2").innerHTML = `
+                    <h2>To proceed with payment, please go to <a href="https://new.gcash.com/" target="_blank">Gcash</a></h2>
+                `;
+                document.querySelector(".card-section").style.display = "none"; // Hide card section
+            } else if (selectedMethod === "PayPal") {
+                paymentContent.querySelector(".payment-h2").innerHTML = `
+                    <h2>To proceed with payment, please go to <a href="https://www.paypal.com/signin" target="_blank">PayPal</a></h2>
+                `;
+                document.querySelector(".card-section").style.display = "none"; // Hide card section
+            } else {
+                // Show the card payment form when "Card" is selected
+                paymentContent.querySelector(".payment-h2").innerHTML = "Payment via credit card or debit card";
+                document.querySelector(".card-section").style.display = "block"; // Show card section
+                resetCardSectionLayout(); // Reset the card section layout
+            }
+        });
+    });
+
     checkoutBtn.addEventListener("click", showPopup);
     popup.querySelector(".close-popup").addEventListener("click", hidePopup);
-    overlay.addEventListener("click", hidePopup);
+
+    function resetCardSectionLayout() {
+        const cardSection = document.querySelector(".card-section");
+        cardSection.style.display = "block"; // Make sure it's visible
+        cardSection.querySelector(".card-input").style.marginBottom = "10px"; // Add spacing between inputs
+        cardSection.querySelector(".card-details").style.display = "flex"; // Ensure card details are visible in a row
+        cardSection.querySelector(".expiry-input").style.marginRight = "10px"; // Add space between expiry and CVV
+        cardSection.querySelector(".cvv-input").style.marginLeft = "10px"; // Add space between expiry and CVV
+        cardSection.querySelector(".billing p").style.marginTop = "10px"; // Add space before billing
+        cardSection.querySelector(".email-input").style.marginBottom = "5px"; // Space for email input
+    }
+
+    // Add validation for card payment
+    document.querySelector(".confirm-payment").addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default form submission
     
-    document.querySelector(".confirm-payment").addEventListener("click", function () {
+        const cardNumber = document.querySelector(".card-input").value;
+        const expiryDate = document.querySelector(".expiry-input").value;
+        const cvv = document.querySelector(".cvv-input").value;
+        const email = document.querySelector(".email-input").value;
+    
+        const cardNumberPattern = /^[0-9]{16}$/;
+        const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        const cvvPattern = /^[0-9]{3}$/;
+    
+        if (!cardNumber.match(cardNumberPattern)) {
+            alert("Please enter a valid 16-digit card number.");
+            return;
+        }
+    
+        if (!expiryDate.match(expiryDatePattern)) {
+            alert("Please enter a valid expiry date (MM/YY).");
+            return;
+        }
+    
+        if (!cvv.match(cvvPattern)) {
+            alert("Please enter a valid 3-digit CVV.");
+            return;
+        }
+    
+        if (!email) {
+            alert("Please enter your email address.");
+            return;
+        }
+    
+        // If validation is successful, show success message
         const successPopup = document.createElement("div");
         successPopup.classList.add("popup-container");
         successPopup.innerHTML = `
@@ -102,12 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
         body.appendChild(successPopup);
-
+    
         document.querySelector(".close-success").addEventListener("click", function () {
             successPopup.remove();
             window.location.href = "homepage.html";
         });
     });
+    
     
     const style = document.createElement("style");
     style.innerHTML = `

@@ -1,211 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokéWebstore</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/assets/css/store_page.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PokéWebstore</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/store_page.css" />
+        <link rel="stylesheet" href="/assets/css/header.css" />
+        <link rel="stylesheet" href="/assets/css/footer.css" />
+    </head>
 
-  <body>
-    <!-- HEADER -->
-    <nav id="navbar">
-      <div class="logo">
-        <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo" />
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
-        <li>
-          <a href="store_page.html" id="storeLink" class="nav-link">Store</a>
-        </li>
-        <li>
-          <a href="redeem_page.html" id="redeemLink" class="nav-link"
-            >Code Redemption</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo"
-            id="eventLink"
-            class="nav-link"
-            >Event Ticketing</a
-          >
-        </li>
-        <li><a href="transaction_history.html" id="homeLink" class="nav-link">Transaction</a></li>
-      </ul>
-      <div class="user-buttons">
-        <button class="sign-in-btn">
-          <a href="registration_page_sign_in.html" id="signinLink">Sign In</a>
-        </button>
-      </div>
-    </nav>
+    <body>
+        <!-- HEADER -->
+        <nav id="navbar">
+            <div class="logo">
+                <img src="/assets/images/pokemon logo.webp" alt="Pokémon GO Logo" />
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="homepage.html" id="homeLink" class="nav-link">Home</a></li>
+                <li>
+                    <a href="store_page.html" id="storeLink" class="nav-link">Store</a>
+                </li>
+                <li>
+                    <a href="redeem_page.html" id="redeemLink" class="nav-link">Code Redemption</a>
+                </li>
+                <li>
+                    <a href="https://tickets.nianticlabs.com/events/#/eventlisting?appId=pgo" id="eventLink" class="nav-link">Event Ticketing</a>
+                </li>
+                <li><a href="transaction_history.html" id="homeLink" class="nav-link">Transaction</a></li>
+            </ul>
+            <div class="user-buttons">
+                <button class="sign-in-btn">
+                    <a href="registration_page_sign_in.html" id="signinLink">Sign In</a>
+                </button>
+            </div>
+        </nav>
 
-    <!-- HERO SECTION -->
-    <div class="hero-section">
-      <div class="hero-text">
-        <h1>STORE</h1>
-        <p>Don’t miss them out here on Pokémon GO Webstore!</p>
-      </div>
-      <div class="pokemon-container left-row">
-        <img src="/assets/images/eeve1.png" class="pokemon" alt="Eevee1" />
-        <img src="/assets/images/eevee.png" class="pokemon" alt="Eevee" />
-        <img
-          src="/assets/images/bulbasaur.png"
-          class="pokemon"
-          alt="Bulbasaur"
-        />
-        <img
-          src="/assets/images/wartortle.png"
-          class="pokemon"
-          alt="Wartortle"
-        />
-        <img
-          src="/assets/images/charizard.png"
-          class="pokemon"
-          alt="Charizard"
-        />
-      </div>
-      <div class="pokemon-container right-row">
-        <img src="/assets/images/pikachu.png" class="pokemon" alt="Pikachu" />
-        <img src="/assets/images/squirtle.png" class="pokemon" alt="Squirtle" />
-        <img
-          src="/assets/images/charmander.webp"
-          class="pokemon"
-          alt="Charmander"
-        />
-        <img
-          src="/assets/images/sprigatito.png"
-          class="pokemon"
-          alt="Sprigatito"
-        />
-        <img src="/assets/images/gengar.png" class="pokemon" alt="Gengar" />
-      </div>
-    </div>
-
-    <!-- FEATURED ITEMS -->
-    <h3>Featured</h3>
-    <div class="featured">
-      <div class="featured-content">
-        <h2>Pokémon GO Fest 2025: Global Ticket</h2>
-        <p>This can only be purchased 1 time.</p>
-        <a href="https://pokemongolive.com/post/go-fest-2025-events-announcement#global">
-          <p class="featured-price">Check Event</p>
-        </a>
-
-      </div>
-      <div class="featured-image">
-        <img src="/assets/images/first featured.png" alt="Featured Item" />
-      </div>
-    </div>
-
-    <!-- Navigation Tabs -->
-    <div class="store-tabs">
-      <span class="tab-btn items active" id="items" data-category="items" onclick="filterCategory('items')">Items</span>
-      <span class="tab-btn item-boxes" id="item-boxes" data-category="item-boxes" onclick="filterCategory('item-boxes')">Item Boxes</span>
-      <span class="tab-btn poke-coins" id="poke-coins" data-category="poke-coins" onclick="filterCategory('poke-coins')">PokéCoins</span>
-      <span class="tab-btn daily-bundles" id="daily-bundles" data-category="daily-bundles" onclick="filterCategory('daily-bundles')">Daily Bundles</span>
-    </div>
-    <br>
-
-    <!-- Store Content -->
-    <div class="store">
-      <div class="bundle-grid" id="bundle-container">
-        <!-- JavaScript will generate cards here -->
-      </div>
-      <div id="sign-in-prompt-container"></div>
-    </div>
-
-
-
-            <!-- Custom Alert Modal -->
-            <div id="customAlert" class="alert-container">
-              <div class="alert-box">
-                  <h2>Pokémon Webstore</h2>
-                  <p>Item added to cart successfully!</p>
-                  <button id="closeAlert">OK</button>
-              </div>
-          </div>
-
-
-
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <div class="footer-column">
-            <a href="https://pokemongolive.com/">Pokémon GO Live</a>
-            <a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
-            <a href="https://pokemongolive.com/events">Events</a>
-            <a href="https://pokemongolive.com/news">News</a>
-          </div>
-          <div class="footer-column">
-            <a href="https://store.pokemongolive.com/support">Support</a>
-            <a href="/Pages/redeem_page.html">Code Redemption</a>
-            <a href="https://pokemongolive.com/community-day/map">Community Day Map</a>
-          </div>
+        <!-- HERO SECTION -->
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>STORE</h1>
+                <p>Don’t miss them out here on Pokémon GO Webstore!</p>
+            </div>
+            <div class="pokemon-container left-row">
+                <img src="/assets/images/eeve1.png" class="pokemon" alt="Eevee1" />
+                <img src="/assets/images/eevee.png" class="pokemon" alt="Eevee" />
+                <img src="/assets/images/bulbasaur.png" class="pokemon" alt="Bulbasaur" />
+                <img src="/assets/images/wartortle.png" class="pokemon" alt="Wartortle" />
+                <img src="/assets/images/charizard.png" class="pokemon" alt="Charizard" />
+            </div>
+            <div class="pokemon-container right-row">
+                <img src="/assets/images/pikachu.png" class="pokemon" alt="Pikachu" />
+                <img src="/assets/images/squirtle.png" class="pokemon" alt="Squirtle" />
+                <img src="/assets/images/charmander.webp" class="pokemon" alt="Charmander" />
+                <img src="/assets/images/sprigatito.png" class="pokemon" alt="Sprigatito" />
+                <img src="/assets/images/gengar.png" class="pokemon" alt="Gengar" />
+            </div>
         </div>
-        <div class="footer-logos">
-          <a href="https://nianticlabs.com/">
-            <img src="/assets/images/niantic logo.png" alt="Niantic Logo" />
-          </a>
-          <a href="https://www.pokemon.com/us">
-            <img src="/assets/images/pokemon company.webp" alt="Pokémon Logo" />
-          </a>
-          <img src="/assets/images/igenerate.png" alt="iGenerate Logo" />
-        </div>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@pokemongo">
-            <img src="/assets/images/youtube.png" alt="YouTube Logo" />
-          </a>
-          <a href="https://www.facebook.com/PokemonGO/">
-            <img src="/assets/images/fb.png" alt="Facebook Logo" />
-          </a>
-          <a href="https://www.instagram.com/pokemongoapp/">
-            <img src="/assets/images/ig.png" alt="Instagram Logo" />
-          </a>
-          <a href="https://www.tiktok.com/@pokemongo">
-            <img src="/assets/images/tiktok.png" alt="TikTok Logo" />
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-links">
-          <a href="https://nianticlabs.com/terms">Terms of Service</a>
-          <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
-          <a href="https://nianticlabs.com/ip-policy">Copyright Policy</a>
-          <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
-        </div>
-        <p>
-          &copy;2025 Niantic, Inc. &copy;Pokémon. &copy;1995-2023 Nintendo /
-          Creatures Inc. / GAME FREAK Inc. Pokémon images used here are
-          trademarks and owned by Nintendo. All rights reserved. For educational
-          purposes only and no copyright infringement is intended.
-        </p>
-      </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="store_page.js"></script>
-  </body>
+        <!-- FEATURED ITEMS -->
+        <h3>Featured</h3>
+        <div class="featured">
+            <div class="featured-content">
+                <h2>Pokémon GO Fest 2025: Global Ticket</h2>
+                <p>This can only be purchased 1 time.</p>
+                <a href="https://pokemongolive.com/post/go-fest-2025-events-announcement#global">
+                    <p class="featured-price">Check Event</p>
+                </a>
+            </div>
+            <div class="featured-image">
+                <img src="/assets/images/first featured.png" alt="Featured Item" />
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="store-tabs">
+            <span class="tab-btn items active" id="items" data-category="items" onclick="filterCategory('items')">Items</span>
+            <span class="tab-btn item-boxes" id="item-boxes" data-category="item-boxes" onclick="filterCategory('item-boxes')">Item Boxes</span>
+            <span class="tab-btn poke-coins" id="poke-coins" data-category="poke-coins" onclick="filterCategory('poke-coins')">PokéCoins</span>
+            <span class="tab-btn daily-bundles" id="daily-bundles" data-category="daily-bundles" onclick="filterCategory('daily-bundles')">Daily Bundles</span>
+        </div>
+        <br />
+
+        <!-- Store Content -->
+        <div class="store">
+            <div class="bundle-grid" id="bundle-container">
+                <!-- JavaScript will generate cards here -->
+            </div>
+            <div id="sign-in-prompt-container"></div>
+        </div>
+
+        <!-- Custom Alert Modal -->
+        <div id="customAlert" class="alert-container">
+            <div class="alert-box">
+                <h2>Pokémon Webstore</h2>
+                <p>Item added to cart successfully!</p>
+                <button id="closeAlert">OK</button>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="https://pokemongolive.com/">Pokémon GO Live</a>
+                        <a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
+                        <a href="https://pokemongolive.com/events">Events</a>
+                        <a href="https://pokemongolive.com/news">News</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="https://store.pokemongolive.com/support">Support</a>
+                        <a href="/Pages/redeem_page.html">Code Redemption</a>
+                        <a href="https://pokemongolive.com/community-day/map">Community Day Map</a>
+                    </div>
+                </div>
+                <div class="footer-logos">
+                    <a href="https://nianticlabs.com/">
+                        <img src="/assets/images/niantic logo.png" alt="Niantic Logo" />
+                    </a>
+                    <a href="https://www.pokemon.com/us">
+                        <img src="/assets/images/pokemon company.webp" alt="Pokémon Logo" />
+                    </a>
+                    <img src="/assets/images/igenerate.png" alt="iGenerate Logo" />
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.youtube.com/@pokemongo">
+                        <img src="/assets/images/youtube.png" alt="YouTube Logo" />
+                    </a>
+                    <a href="https://www.facebook.com/PokemonGO/">
+                        <img src="/assets/images/fb.png" alt="Facebook Logo" />
+                    </a>
+                    <a href="https://www.instagram.com/pokemongoapp/">
+                        <img src="/assets/images/ig.png" alt="Instagram Logo" />
+                    </a>
+                    <a href="https://www.tiktok.com/@pokemongo">
+                        <img src="/assets/images/tiktok.png" alt="TikTok Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="https://nianticlabs.com/terms">Terms of Service</a>
+                    <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+                    <a href="https://nianticlabs.com/ip-policy">Copyright Policy</a>
+                    <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+                </div>
+                <p>
+                    &copy;2025 Niantic, Inc. &copy;Pokémon. &copy;1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon images used here are trademarks and owned by Nintendo. All rights reserved. For educational purposes only and no
+                    copyright infringement is intended.
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="store_page.js"></script>
+    </body>
 </html>
