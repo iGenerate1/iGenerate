@@ -829,7 +829,7 @@ h3{
     }
 
     .carousel-caption h1 {
-        font-size: 4.5vw; 
+        font-size: 5.5vw; 
     }
 
     .carousel-caption p {
@@ -876,7 +876,7 @@ h3{
     }
 
     .featured {
-        width: 290px;
+        width: 450px;
         height: 350px;
         padding: 20px;
         margin-top: 10px;
@@ -889,8 +889,9 @@ h3{
     }
 
     .featured-image img {
-        width: 100px;
-        height: 100px;
+        margin-top: -20px;
+        width: 150px;
+        height: auto;
     }
 
     .price {
@@ -993,7 +994,7 @@ h3{
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 290px;
+        width: 450px;
         height: 350px;
         padding: 20px;
         margin-bottom: 20px;
@@ -1009,7 +1010,7 @@ h3{
         font-size: 1.5em; 
         width: 150%; 
         margin-top: -50px;
-        margin-left: -20px;
+        margin-left: -30px;
         margin-bottom: 55px;
     }
 
@@ -1017,7 +1018,7 @@ h3{
     .app-stores button:nth-child(3) img {
         width: 100px; 
         height: 30px;
-        margin-left: 130px;
+        margin-left: 230px;
         margin-top: -140px;
     }
 
@@ -1025,7 +1026,7 @@ h3{
     .app-stores button:nth-child(2) img {
         width: 100px; 
         height: 30px; 
-        margin-left: 130px;
+        margin-left: 230px;
         margin-top: 1px; 
     }
 
@@ -1033,7 +1034,7 @@ h3{
     .app-stores button:nth-child(1) img {
         width: 100px; 
         height: 30px; 
-        margin-left: 130px;
+        margin-left: 230px;
         margin-top: -80px;
     }
 
