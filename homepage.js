@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const userData = JSON.parse(localStorage.getItem("currentUser")); // FIXED KEY
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const username = localStorage.getItem("username") || "TRAINER"; // Default username
+    const username = localStorage.getItem("currentUser") || "TRAINER"; // Default username
 
     console.log("User logged in:", isLoggedIn);
 
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update Greeting in Carousel if Logged In
     const carouselHeading = document.querySelector(".carousel-caption h1");
     if (carouselHeading && isLoggedIn) {
-        carouselHeading.textContent = `WELCOME BACK, ${username}!`;
+        carouselHeading.textContent = `WELCOME BACK, ${userData.ign.toUpperCase()}!`;
     }
 
     // Show Bundles if Logged In
