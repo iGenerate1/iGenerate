@@ -24,7 +24,7 @@ body {
 }
 
 .cart-header {
-    background: url("/assets/images/cartpage-banner.jpg") center/cover;
+    background: url("assets/images/cartpage-banner.jpg") center/cover;
     padding: 40px 20px;
     color: #ffffff;
     border-radius: 10px 10px 0 0;
