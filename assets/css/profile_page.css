@@ -318,6 +318,13 @@ body {
         font-size: 14px;
         max-width: 150px;
     }
+    
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
+    }
 
     .coin-image {
         width: 18px;
@@ -361,6 +368,13 @@ body {
     .profile-avatar img {
         width: 97%; /* Slightly bigger avatar */
     }
+    
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
+    }
 
     .profile-info h2 {
         font-size: 16px;
@@ -391,6 +405,13 @@ body {
 
     .coin-image {
         width: 14px;
+    }
+
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
     }
 
     .profile-avatar img {
