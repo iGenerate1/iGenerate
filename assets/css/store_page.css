@@ -405,6 +405,13 @@ h3 {
     .bundle-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
+    }
 }
 
 /* Mobile (width ≤ 768px) */
@@ -444,6 +451,14 @@ h3 {
     .bundle-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
+    }
+
 }
 
 /* Extra Small Devices (width ≤ 480px) */
@@ -451,6 +466,13 @@ h3 {
     .hero-section {
         height: 25vh;
         padding: 40px 15px;
+    }
+
+    .bluegreen-line {
+    height: 10px;
+    background-color: #39c29c;
+    margin: 0;
+    opacity: 100%;
     }
 
     .hero-text h1 {
