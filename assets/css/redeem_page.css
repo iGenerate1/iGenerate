@@ -306,6 +306,12 @@ body {
         padding: 15px;
     }
 
+    .redeem-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+        width: 65%;
+    }
+
     #closeOverlay {
         font-size: 14px;
         padding: 8px 16px;
@@ -335,6 +341,12 @@ body {
 @media (max-width: 900px) {
     .redeem-container {
         width: 95%;
+    }
+
+    .redeem-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+        width: 90%;
     }
     
     /* Footer */
